@@ -306,3 +306,8 @@
 - [x] Services Top-Gradient höher gemacht (h-32 → h-48)
 - [x] z-index erhöht (z-10 → z-20) damit Gradient über Dot-Pattern liegt
 - [x] Getestet im Browser
+
+
+## Leistungen Section - Bottom-Gradient anpassen ✅ ABGESCHLOSSEN
+- [x] Bottom-Gradient von h-32 auf h-48 erhöht (Zeile 625)
+- [x] Symmetrisch mit Top-Gradient (beide h-48)
