@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Code, Smartphone, Search, Headphones, CheckCircle2, Phone, Calendar, Sparkles, Zap, Target, Star, TrendingUp, Briefcase, Users, Award } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Search, Headphones, CheckCircle2, Phone, Calendar, Sparkles, Zap, Target, Star, TrendingUp, Briefcase, Users, Award, Code2 } from "lucide-react";
+
+import { NumberTicker } from '@/components/ui/number-ticker';
 import Layout from "@/components/Layout";
 import { Marquee } from "@/components/ui/marquee-magic";
 import { AuroraText } from "@/components/ui/aurora-text";
@@ -628,98 +630,169 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Bento Grid Layout - Clean & Professional */}
-          <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Statistik-Karten */}
+          {/* Bento Grid Layout - Asymmetric with NumberTicker */}
+          <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[280px]">
+            {/* Hero Card - 2x2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ y: -4 }}
+              className="group relative col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
-                <Briefcase className="h-6 w-6 text-primary" />
+              {/* Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/5 to-transparent">
+                <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/30 rounded-full blur-3xl" />
               </div>
-              <div className="text-5xl font-bold text-foreground mb-2">40+</div>
-              <div className="text-sm text-muted-foreground">Erfolgreich abgeschlossene Projekte</div>
+              
+              {/* Content */}
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 w-fit group-hover:bg-primary/20 transition-colors duration-300">
+                  <Code2 className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-3xl font-bold text-foreground mb-4">Warum WebDesignPro?</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Wir kombinieren modernste Technologie mit kreativem Design, um Websites zu schaffen, die nicht nur gut aussehen, sondern auch Ergebnisse liefern.
+                </p>
+              </div>
             </motion.div>
 
+            {/* Stat Card 1 - NumberTicker */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ y: -4 }}
+              className="group relative col-span-1 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
-                <Users className="h-6 w-6 text-primary" />
+              {/* Background Number */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-5">
+                <div className="text-9xl font-bold text-primary">
+                  <NumberTicker value={40} />+
+                </div>
               </div>
-              <div className="text-5xl font-bold text-foreground mb-2">8+</div>
-              <div className="text-sm text-muted-foreground">Zufriedene Kunden</div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Briefcase className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-5xl font-bold text-foreground mb-2">
+                  <NumberTicker value={40} />+
+                </div>
+                <div className="text-sm text-muted-foreground">Erfolgreich abgeschlossene Projekte</div>
+              </div>
             </motion.div>
 
+            {/* Stat Card 2 - NumberTicker */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ y: -4 }}
+              className="group relative col-span-1 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
-                <Award className="h-6 w-6 text-primary" />
+              {/* Background Number */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-5">
+                <div className="text-9xl font-bold text-primary">
+                  <NumberTicker value={8} />+
+                </div>
               </div>
-              <div className="text-5xl font-bold text-foreground mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Expertise & Qualität</div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-5xl font-bold text-foreground mb-2">
+                  <NumberTicker value={8} />+
+                </div>
+                <div className="text-sm text-muted-foreground">Zufriedene Kunden</div>
+              </div>
             </motion.div>
 
-            {/* Feature-Karten */}
+            {/* Feature Card - Schnelle Umsetzung */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ y: -4 }}
+              className="group relative col-span-1 md:col-span-2 lg:col-span-2 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
-                <Zap className="h-6 w-6 text-primary" />
+              {/* Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10">
+                <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                  <Zap className="w-48 h-48 text-primary" />
+                </div>
               </div>
-              <h3 className="mb-2 text-xl font-bold text-foreground">Schnelle Umsetzung</h3>
-              <p className="text-sm text-muted-foreground">Ihre Website ist in 2 Wochen fertig und online</p>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Zap className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-2 text-2xl font-bold text-foreground">Schnelle Umsetzung</h3>
+                <p className="text-muted-foreground">Ihre Website ist in 2 Wochen fertig und online. Kein langes Warten, schnelle Ergebnisse.</p>
+              </div>
             </motion.div>
 
+            {/* Stat Card 3 - NumberTicker */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.5 }}
+              whileHover={{ y: -4 }}
+              className="group relative col-span-1 md:col-span-2 lg:col-span-1 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
-                <Star className="h-6 w-6 text-primary" />
+              {/* Background Number */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-5">
+                <div className="text-9xl font-bold text-primary">
+                  <NumberTicker value={100} />%
+                </div>
               </div>
-              <h3 className="mb-2 text-xl font-bold text-foreground">Modernes Design</h3>
-              <p className="text-sm text-muted-foreground">Zeitgemäße Designs mit neuesten Technologien</p>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Award className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-5xl font-bold text-foreground mb-2">
+                  <NumberTicker value={100} />%
+                </div>
+                <div className="text-sm text-muted-foreground">Expertise & Qualität</div>
+              </div>
             </motion.div>
 
+            {/* Feature Card - Modernes Design */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
-              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.6 }}
+              whileHover={{ y: -4 }}
+              className="group relative col-span-1 md:col-span-2 lg:col-span-1 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
-                <TrendingUp className="h-6 w-6 text-primary" />
+              {/* Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10">
+                <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                  <Star className="w-32 h-32 text-primary" />
+                </div>
               </div>
-              <h3 className="mb-2 text-xl font-bold text-foreground">Messbare Ergebnisse</h3>
-              <p className="text-sm text-muted-foreground">Mehr Kunden und höhere Umsätze garantiert</p>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Star className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-2 text-xl font-bold text-foreground">Modernes Design</h3>
+                <p className="text-sm text-muted-foreground">Zeitgemäße Designs mit neuesten Technologien</p>
+              </div>
             </motion.div>
           </div>
         </div>
