@@ -386,6 +386,8 @@ export default function Home() {
         ref={projectsReveal.ref as React.RefObject<HTMLElement>}
         className={`relative py-24 md:py-32 overflow-hidden section-reveal ${projectsReveal.isVisible ? 'is-visible' : ''}`}
       >
+        {/* Gradient Overlay for smooth transition */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
         <div className="container">
           <div className="mx-auto max-w-6xl">
             {/* Section Header */}
@@ -470,6 +472,8 @@ export default function Home() {
         ref={servicesReveal.ref as React.RefObject<HTMLElement>}
         className={`relative py-32 -mt-16 z-10 overflow-hidden section-reveal ${servicesReveal.isVisible ? 'is-visible' : ''}`}
       >
+        {/* Gradient Overlay for smooth transition */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
         {/* Dot Pattern Background - Contained */}
         <div className="absolute inset-0 bg-dot-pattern opacity-50" />
         {/* Subtle Gradient Overlay */}
@@ -709,6 +713,8 @@ export default function Home() {
         ref={testimonialsReveal.ref as React.RefObject<HTMLElement>}
         className={`relative py-20 md:py-32 overflow-hidden section-reveal ${testimonialsReveal.isVisible ? 'is-visible' : ''}`}
       >
+        {/* Gradient Overlay for smooth transition */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
         
         <div className="container relative">
           {/* Header */}
@@ -756,6 +762,8 @@ export default function Home() {
         ref={faqReveal.ref as React.RefObject<HTMLElement>}
         className={`relative py-24 md:py-32 overflow-hidden section-reveal ${faqReveal.isVisible ? 'is-visible' : ''}`}
       >
+        {/* Gradient Overlay for smooth transition */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
         {/* Wave Pattern Background */}
         <div className="absolute inset-0 bg-wave-pattern" />
         {/* Subtle Gradient Overlay */}
@@ -845,6 +853,8 @@ export default function Home() {
         ref={ctaReveal.ref as React.RefObject<HTMLElement>}
         className={`relative py-20 md:py-32 overflow-hidden section-reveal ${ctaReveal.isVisible ? 'is-visible' : ''}`}
       >
+        {/* Gradient Overlay for smooth transition */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
         
         <div className="container relative">
           <div className="mx-auto max-w-4xl">
