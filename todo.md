@@ -205,3 +205,16 @@
 - [x] Vergleich mit Homepage: Konsistente Farben, Typografie und Stil
 - [x] 6 Karten: Hero (2x2 "Warum WebDesignPro?"), 2x Stats (31+, 6+), 1x Feature (2x1 Schnelle Umsetzung), 2x Stats (77%, Modernes Design)
 - [x] NumberTicker Animationen funktionieren (31+, 6+, 77% zählen hoch)
+
+
+## Bento Grid - Magic UI BentoCard Komponente verwenden (pasted_content_3.txt)
+- [x] Magic UI BentoCard/BentoGrid Komponente aus pasted_content_3.txt implementieren
+- [x] BentoCard und BentoGrid in bento-grid.tsx erstellt (bereits vorhanden, an Website-Design angepasst)
+- [x] An Website-Design anpassen (Theme-Variablen: bg-card, text-foreground, text-primary)
+- [x] Altes Bento Grid in Home.tsx KOMPLETT entfernt (alle motion.div Karten)
+- [x] Neues Bento Grid mit BentoCard Komponente implementiert (6 Karten)
+- [x] Background-Prop mit NumberTicker und visuellen Elementen genutzt
+- [x] Asymmetrisches Layout (col-span-1, col-span-2, row-span-2, auto-rows-[22rem])
+- [x] TypeScript-Fehler behoben (name Prop als String statt React Element)
+- [ ] Hover-Animationen testen (Icon scale, translate-y, CTA Button erscheint)
+- [ ] Testen in Light und Dark Mode
