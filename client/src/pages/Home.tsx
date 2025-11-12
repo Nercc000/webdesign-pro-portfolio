@@ -616,7 +616,7 @@ export default function Home() {
       {/* Why Me Section - Redesigned */}
       <section 
         ref={whyMeReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${whyMeReveal.isVisible ? 'is-visible' : ''}`}
+        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${whyMeReveal.isVisible ? 'is-visible' : ''} bg-muted/30`}
       >
         
         <div className="container relative">
@@ -641,7 +641,7 @@ export default function Home() {
           <BentoGrid className="mx-auto max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <BentoCard
               name="Warum WebDesignPro?"
-              className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2"
+              className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 [&_.p-6]:pt-2 [&_h3]:text-base [&_p]:text-sm"
               background={<CodeEditorAnimation />}
               Icon={Code2}
               description="Wir kombinieren modernste Technologie mit kreativem Design, um Websites zu schaffen, die nicht nur gut aussehen, sondern auch Ergebnisse liefern."

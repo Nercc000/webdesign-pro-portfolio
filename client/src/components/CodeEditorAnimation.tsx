@@ -50,9 +50,9 @@ export function CodeEditorAnimation() {
   }, [currentLine, currentChar]);
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-8">
+    <div className="absolute inset-0 flex items-center justify-center p-4">
       <motion.div 
-        className="relative w-full max-w-md rounded-lg border border-border/50 bg-card/50 backdrop-blur-sm p-6 shadow-xl"
+        className="relative w-full max-w-2xl rounded-lg border border-border/50 bg-card/50 backdrop-blur-sm p-8 shadow-xl"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
