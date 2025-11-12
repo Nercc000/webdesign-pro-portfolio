@@ -299,3 +299,10 @@
 - [x] Doppelte Gradient-Zeilen in Services Section gefunden (Zeile 490-492)
 - [x] 3 überflüssige Zeilen entfernt (Kommentar + 2 Gradient-Divs)
 - [x] Services Section hat jetzt nur noch Wrapper-Gradients (wie alle anderen Sections)
+
+
+## Leistungen Section - Gradient-Übergang fixen ✅ ABGESCHLOSSEN
+- [x] Problem identifiziert: Harter Schnitt zwischen Portfolio und Leistungen
+- [x] Services Top-Gradient höher gemacht (h-32 → h-48)
+- [x] z-index erhöht (z-10 → z-20) damit Gradient über Dot-Pattern liegt
+- [x] Getestet im Browser

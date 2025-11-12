@@ -475,7 +475,7 @@ export default function Home() {
       {/* Services Section - Minimalist Design */}
       <div className="relative">
         {/* Top Gradient Overlay */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
         
         <section 
           id="services"
