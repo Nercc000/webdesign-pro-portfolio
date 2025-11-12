@@ -248,3 +248,9 @@
 - [x] Section Hintergrund im Dark Mode schwärzer gemacht (oklch(0.10) statt oklch(0.15))
 - [x] Muted Farbe im Dark Mode dunkler gemacht (oklch(0.15) statt oklch(0.25))
 - [x] Getestet im Browser (Dark Mode) - funktioniert perfekt, viel schwärzer!
+
+
+## Gradient-Übergang zur Why Me Section ✅ ABGESCHLOSSEN
+- [x] Gradient-Overlay oben auf der "Warum ich?" Section hinzugefügt
+- [x] Butterweichen Übergang von vorheriger Section erstellt (from-background to-transparent)
+- [x] Getestet im Browser (Dark Mode) - funktioniert perfekt, nahtloser Übergang!

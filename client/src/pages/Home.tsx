@@ -618,6 +618,8 @@ export default function Home() {
         ref={whyMeReveal.ref as React.RefObject<HTMLElement>}
         className={`relative py-24 md:py-32 overflow-hidden section-reveal ${whyMeReveal.isVisible ? 'is-visible' : ''} bg-muted/30`}
       >
+        {/* Gradient Overlay for smooth transition */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
         
         <div className="container relative">
           {/* Header */}
