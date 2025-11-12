@@ -525,7 +525,8 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={slideInLeft}
+              variants={fadeInUp}
+              style={{ willChange: 'transform, opacity' }}
             >
               <div className="md:col-span-3">
                 <div className="flex items-center gap-6">
@@ -550,7 +551,8 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={slideInRight}
+              variants={fadeInUp}
+              style={{ willChange: 'transform, opacity' }}
             >
               <div className="md:col-span-9 md:order-1 md:flex md:flex-col md:items-end relative">
                 <h3 className="mb-4 text-3xl font-bold md:text-4xl md:text-right transition-colors group-hover:text-primary">Responsive Design</h3>
@@ -575,7 +577,8 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={slideInLeft}
+              variants={fadeInUp}
+              style={{ willChange: 'transform, opacity' }}
             >
               <div className="md:col-span-3">
                 <div className="flex items-center gap-6">
@@ -600,7 +603,8 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={slideInRight}
+              variants={fadeInUp}
+              style={{ willChange: 'transform, opacity' }}
             >
               <div className="md:col-span-9 md:order-1 md:flex md:flex-col md:items-end relative">
                 <h3 className="mb-4 text-3xl font-bold md:text-4xl md:text-right transition-colors group-hover:text-primary">Wartung & Support</h3>
