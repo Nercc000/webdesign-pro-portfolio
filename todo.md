@@ -241,3 +241,10 @@
 - [x] "Warum WebDesignPro?" Karte: Code-Editor Animation größer (max-w-2xl statt max-w-md, p-8 statt p-6)
 - [x] Section Hintergrund dunkler gemacht (bg-muted/30 hinzugefügt)
 - [x] Getestet im Browser - funktioniert perfekt
+
+
+## Dark Mode - Schwärzere Farben ✅ ABGESCHLOSSEN
+- [x] Card Hintergrund im Dark Mode schwärzer gemacht (oklch(0.12) statt oklch(0.20))
+- [x] Section Hintergrund im Dark Mode schwärzer gemacht (oklch(0.10) statt oklch(0.15))
+- [x] Muted Farbe im Dark Mode dunkler gemacht (oklch(0.15) statt oklch(0.25))
+- [x] Getestet im Browser (Dark Mode) - funktioniert perfekt, viel schwärzer!
