@@ -10,20 +10,11 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { HeroDecorations } from "@/components/HeroDecorations";
 import { CodeSnippetIllustration, AnalyticsChartIllustration } from "@/components/ServicesIllustrations";
 import { motion } from "framer-motion";
-import { HeroFeatureCard } from "@/components/creative/HeroFeatureCard";
-import { GlassStatCard } from "@/components/creative/GlassStatCard";
-import { Visual3DCard } from "@/components/creative/Visual3DCard";
-import { TechStackShowcase } from "@/components/creative/TechStackShowcase";
-import { ProcessTimeline } from "@/components/creative/ProcessTimeline";
-import { PerformanceMetrics } from "@/components/creative/PerformanceMetrics";
+
 
 import { Link } from "wouter";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
-import { BentoCard, BentoGrid } from "@/components/creative/BentoCard";
-import { StatCard } from "@/components/creative/StatCard";
-import { RankingList } from "@/components/creative/RankingList";
-import { FeatureCard } from "@/components/creative/FeatureCard";
-import { CodeShowcase } from "@/components/creative/CodeShowcase";
+
 
 // Animation Variants
 const fadeIn = {
@@ -637,49 +628,52 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Bento Grid Layout - Einfach & Funktionierend */}
+          {/* Bento Grid Layout - Clean & Professional */}
           <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Statistik-Karten */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
                 <Briefcase className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-4xl font-bold text-foreground">40+</div>
-              <div className="mt-2 text-sm text-muted-foreground">Erfolgreich abgeschlossene Projekte</div>
+              <div className="text-5xl font-bold text-foreground mb-2">40+</div>
+              <div className="text-sm text-muted-foreground">Erfolgreich abgeschlossene Projekte</div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
                 <Users className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-4xl font-bold text-foreground">8+</div>
-              <div className="mt-2 text-sm text-muted-foreground">Zufriedene Kunden</div>
+              <div className="text-5xl font-bold text-foreground mb-2">8+</div>
+              <div className="text-sm text-muted-foreground">Zufriedene Kunden</div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
                 <Award className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-4xl font-bold text-foreground">100%</div>
-              <div className="mt-2 text-sm text-muted-foreground">Expertise & Qualität</div>
+              <div className="text-5xl font-bold text-foreground mb-2">100%</div>
+              <div className="text-sm text-muted-foreground">Expertise & Qualität</div>
             </motion.div>
 
             {/* Feature-Karten */}
@@ -687,10 +681,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-foreground">Schnelle Umsetzung</h3>
@@ -701,10 +696,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
                 <Star className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-foreground">Modernes Design</h3>
@@ -715,10 +711,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+              transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+              whileHover={{ y: -8, transition: { duration: 0.3, ease: "easeOut" } }}
+              className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+              <div className="mb-4 inline-flex rounded-2xl bg-primary/10 p-3 group-hover:bg-primary/20 transition-colors duration-300">
                 <TrendingUp className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mb-2 text-xl font-bold text-foreground">Messbare Ergebnisse</h3>
