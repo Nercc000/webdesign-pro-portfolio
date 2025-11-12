@@ -334,3 +334,5 @@
 - [x] Loading Screen implementieren (wartet auf alle Ressourcen bevor Hero-Animationen starten)
 
 - [x] Hero Section Animationen optimieren (schnellere Delays, Custom Easing, will-change, 36% schneller)
+
+- [x] Scroll Indicator am unteren Hero-Rand implementieren (animierter Pfeil, verschwindet beim Scrollen)

@@ -18,6 +18,7 @@ import { Marquee } from "@/components/ui/marquee-magic";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { HeroDecorations } from "@/components/HeroDecorations";
 import { CodeSnippetIllustration, AnalyticsChartIllustration } from "@/components/ServicesIllustrations";
+import ScrollIndicator from "@/components/ScrollIndicator";
 import { motion } from "framer-motion";
 
 
@@ -387,6 +388,9 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <ScrollIndicator />
 
         {/* Decorative Elements */}
         <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
