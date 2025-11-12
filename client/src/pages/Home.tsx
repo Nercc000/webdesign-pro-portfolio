@@ -625,28 +625,28 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Bento Grid Layout - Inspired by farisschmidt.de */}
+          {/* Bento Grid Layout - Theme-Aware */}
           <div className="mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               
               {/* Branding Card - Top Left */}
-              <div className="lg:col-span-2 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-8 transition-all hover:border-primary/50">
+              <div className="lg:col-span-2 lg:row-span-1 rounded-2xl bg-card text-card-foreground border border-border p-8 transition-all hover:border-primary/50 hover:shadow-lg">
                 <div className="flex h-full flex-col justify-center">
-                  <h3 className="mb-3 text-2xl font-bold text-white">
+                  <h3 className="mb-3 text-2xl font-bold">
                     Marktführer Branding
                   </h3>
-                  <p className="text-base text-white/70 leading-relaxed">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     Eine <span className="text-primary font-semibold">"moderne"</span> und <span className="text-primary font-semibold">"professionelle"</span> Website bekommt du mittlerweile günstig an jeder Ecke. Bei uns liegt der Fokus darauf, die höchstmögliche Qualität und Wirkung herauszuholen.
                   </p>
                 </div>
               </div>
 
               {/* Ranking List - Top Right */}
-              <div className="lg:col-span-2 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50">
+              <div className="lg:col-span-2 lg:row-span-1 rounded-2xl bg-card text-card-foreground border border-border p-6 transition-all hover:border-primary/50 hover:shadow-lg">
                 <div className="flex h-full flex-col">
                   <div className="mb-4 flex items-center justify-between">
-                    <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider">Die besten im Geschäft</h4>
-                    <Search className="h-4 w-4 text-white/40" />
+                    <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Die besten im Geschäft</h4>
+                    <Search className="h-4 w-4 text-muted-foreground" />
                   </div>
                   <div className="flex flex-col gap-2">
                     {[
@@ -657,10 +657,10 @@ export default function Home() {
                     ].map((item) => (
                       <div
                         key={item.rank}
-                        className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition-all hover:border-primary/50 hover:bg-white/10"
+                        className="flex items-center gap-3 rounded-lg border border-border bg-muted/50 px-4 py-3 text-sm font-medium transition-all hover:border-primary/50 hover:bg-accent"
                       >
                         <span className="text-primary font-bold">{item.rank}</span>
-                        <span>{item.label}</span>
+                        <span className="text-foreground">{item.label}</span>
                       </div>
                     ))}
                   </div>
@@ -668,94 +668,94 @@ export default function Home() {
               </div>
 
               {/* Image Card - Middle Left */}
-              <div className="lg:col-span-2 lg:row-span-2 rounded-2xl bg-black border border-white/10 overflow-hidden transition-all hover:border-primary/50 group">
+              <div className="lg:col-span-2 lg:row-span-2 rounded-2xl bg-card border border-border overflow-hidden transition-all hover:border-primary/50 hover:shadow-lg group">
                 <div className="relative h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black to-black" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
                   <div className="relative h-full flex flex-col justify-end p-8">
                     <div className="mb-4 h-48 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center">
                       <Code className="h-24 w-24 text-primary/50" />
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-2">Detailliert geplant</h4>
-                    <p className="text-white/70">Jedes Projekt wird sorgfältig konzipiert und umgesetzt</p>
+                    <h4 className="text-2xl font-bold text-foreground mb-2">Detailliert geplant</h4>
+                    <p className="text-muted-foreground">Jedes Projekt wird sorgfältig konzipiert und umgesetzt</p>
                   </div>
                 </div>
               </div>
 
               {/* Stats Grid - Middle Right */}
               <div className="lg:col-span-2 lg:row-span-2 grid grid-cols-2 gap-4">
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
+                <div className="rounded-2xl bg-card text-card-foreground border border-border p-6 transition-all hover:border-primary/50 hover:shadow-lg flex flex-col items-center justify-center text-center">
                   <div className="text-6xl font-bold text-primary mb-2">40+</div>
-                  <div className="text-sm font-medium text-white/70">Projekte</div>
+                  <div className="text-sm font-medium text-muted-foreground">Projekte</div>
                 </div>
                 
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
+                <div className="rounded-2xl bg-card text-card-foreground border border-border p-6 transition-all hover:border-primary/50 hover:shadow-lg flex flex-col items-center justify-center text-center">
                   <div className="text-6xl font-bold text-primary mb-2">8+</div>
-                  <div className="text-sm font-medium text-white/70">Zufriedene Kunden</div>
+                  <div className="text-sm font-medium text-muted-foreground">Zufriedene Kunden</div>
                 </div>
                 
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
+                <div className="rounded-2xl bg-card text-card-foreground border border-border p-6 transition-all hover:border-primary/50 hover:shadow-lg flex flex-col items-center justify-center text-center">
                   <div className="text-6xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-sm font-medium text-white/70">Expertise</div>
+                  <div className="text-sm font-medium text-muted-foreground">Expertise</div>
                 </div>
                 
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
+                <div className="rounded-2xl bg-card text-card-foreground border border-border p-6 transition-all hover:border-primary/50 hover:shadow-lg flex flex-col items-center justify-center text-center">
                   <div className="text-6xl font-bold text-primary mb-2">4+</div>
-                  <div className="text-sm font-medium text-white/70">Jahre Erfahrung</div>
+                  <div className="text-sm font-medium text-muted-foreground">Jahre Erfahrung</div>
                 </div>
               </div>
 
               {/* Strategy Card - Bottom Left */}
-              <div className="lg:col-span-1 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50">
+              <div className="lg:col-span-1 lg:row-span-1 rounded-2xl bg-card text-card-foreground border border-border p-6 transition-all hover:border-primary/50 hover:shadow-lg">
                 <div className="flex h-full flex-col justify-center">
-                  <h4 className="text-lg font-bold text-white mb-4">Individuelle Strategien</h4>
+                  <h4 className="text-lg font-bold mb-4">Individuelle Strategien</h4>
                   <div className="grid grid-cols-3 gap-2">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 border border-white/10" />
+                      <div key={i} className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 border border-border" />
                     ))}
                   </div>
                 </div>
               </div>
 
               {/* Results Table - Bottom Right */}
-              <div className="lg:col-span-3 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50">
+              <div className="lg:col-span-3 lg:row-span-1 rounded-2xl bg-card text-card-foreground border border-border p-6 transition-all hover:border-primary/50 hover:shadow-lg">
                 <div className="flex h-full flex-col">
-                  <h4 className="text-lg font-bold text-white mb-4">Optimiert für echte Ergebnisse</h4>
+                  <h4 className="text-lg font-bold mb-4">Optimiert für echte Ergebnisse</h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                     <div>
-                      <div className="text-white/50 mb-2">Letzte 30 Tage</div>
+                      <div className="text-muted-foreground mb-2">Letzte 30 Tage</div>
                       <div className="space-y-1">
-                        <div className="flex justify-between text-white/80">
-                          <span>Leads</span>
+                        <div className="flex justify-between">
+                          <span className="text-foreground">Leads</span>
                           <span className="text-primary font-semibold">+127%</span>
                         </div>
-                        <div className="flex justify-between text-white/80">
-                          <span>Conversions</span>
+                        <div className="flex justify-between">
+                          <span className="text-foreground">Conversions</span>
                           <span className="text-primary font-semibold">+89%</span>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <div className="text-white/50 mb-2">Performance</div>
+                      <div className="text-muted-foreground mb-2">Performance</div>
                       <div className="space-y-1">
-                        <div className="flex justify-between text-white/80">
-                          <span>Page Speed</span>
+                        <div className="flex justify-between">
+                          <span className="text-foreground">Page Speed</span>
                           <span className="text-primary font-semibold">98/100</span>
                         </div>
-                        <div className="flex justify-between text-white/80">
-                          <span>SEO Score</span>
+                        <div className="flex justify-between">
+                          <span className="text-foreground">SEO Score</span>
                           <span className="text-primary font-semibold">95/100</span>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <div className="text-white/50 mb-2">Technologie</div>
+                      <div className="text-muted-foreground mb-2">Technologie</div>
                       <div className="space-y-1">
-                        <div className="flex justify-between text-white/80">
-                          <span>React 19</span>
+                        <div className="flex justify-between">
+                          <span className="text-foreground">React 19</span>
                           <span className="text-primary font-semibold">Latest</span>
                         </div>
-                        <div className="flex justify-between text-white/80">
-                          <span>TypeScript</span>
+                        <div className="flex justify-between">
+                          <span className="text-foreground">TypeScript</span>
                           <span className="text-primary font-semibold">5.0+</span>
                         </div>
                       </div>
