@@ -11,7 +11,6 @@ import { HeroDecorations } from "@/components/HeroDecorations";
 import { CodeSnippetIllustration, AnalyticsChartIllustration } from "@/components/ServicesIllustrations";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { useSectionReveal } from "@/hooks/useSectionReveal";
 
 // Animation Variants
 const fadeIn = {
@@ -194,14 +193,6 @@ const TestimonialCard = ({ name, company, text, rating, logo, demoLink }: { name
 };
 
 export default function Home() {
-  // Section reveal hooks
-  const projectsReveal = useSectionReveal();
-  const servicesReveal = useSectionReveal();
-  const whyMeReveal = useSectionReveal();
-  const testimonialsReveal = useSectionReveal();
-  const faqReveal = useSectionReveal();
-  const ctaReveal = useSectionReveal();
-
   const features = [
     "Persönliche Betreuung während des gesamten Projekts",
     "Transparente Preisgestaltung ohne versteckte Kosten",
@@ -261,9 +252,9 @@ export default function Home() {
   ];
 
   return (
-    <Layout className="bg-gradient-to-b from-background via-primary/3 via-30% via-primary/5 via-50% via-primary/3 via-70% to-background">
+    <Layout>
       {/* Hero Section - First Impression */}
-      <section className="relative h-screen flex items-center overflow-hidden pt-24 md:pt-0">
+      <section className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-accent/10 pt-24 md:pt-0">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         
@@ -275,7 +266,7 @@ export default function Home() {
 
             {/* Main Headline - Problem Focused */}
             <motion.h1 
-              className="mb-6 text-4xl font-bold tracking-tight leading-[1.2] sm:text-5xl md:text-7xl lg:text-8xl"
+              className="mb-8 text-4xl font-bold tracking-tight leading-[1.2] sm:text-5xl md:text-6xl lg:text-6xl"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
@@ -291,13 +282,13 @@ export default function Home() {
 
             {/* Value Proposition - Minimal Text */}
             <motion.p 
-              className="mx-auto mb-8 max-w-2xl text-xl font-normal leading-relaxed text-muted-foreground md:text-2xl"
+              className="mx-auto mb-12 max-w-2xl text-lg font-normal leading-relaxed text-muted-foreground md:text-xl"
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
               transition={{ delay: 0.4 }}
             >
-              Wir erstellen Websites, die Ihnen mehr Kunden bringen.
+              Ich erstelle Websites, die Ihnen mehr Kunden bringen.
               <br />
               <span className="text-foreground">Garantiert. Oder Geld zurück.</span>
             </motion.p>
@@ -369,103 +360,10 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
       </section>
 
-      {/* Featured Projects Section */}
-      <section 
-        ref={projectsReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${projectsReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        <div className="container">
-          <div className="mx-auto max-w-6xl">
-            {/* Section Header */}
-            <motion.div 
-              className="mb-16 text-center"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-            >
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
-                <Target className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-primary">Portfolio</span>
-              </div>
-              <h2 className="mb-6 text-3xl font-bold leading-[1.3] md:text-4xl lg:text-5xl">
-                Ausgewählte{" "}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Projekte
-                </span>
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                Echte Ergebnisse für echte Unternehmen – sehen Sie selbst
-              </p>
-            </motion.div>
-
-            {/* Projects Grid */}
-            <motion.div 
-              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
-              <ProjectCard
-                title="Bella Cucina Restaurant"
-                description="Moderne Restaurant-Website mit Online-Reservierungssystem und interaktiver Speisekarte. Optimiert für mobile Geräte und schnelle Ladezeiten."
-                image="/project-bella-cucina.jpg"
-                category="Gastronomie"
-                technologies={["React", "TypeScript", "Tailwind CSS"]}
-                results="+100% Online-Reservierungen"
-              />
-              
-              <ProjectCard
-                title="Boutique Luna Shop"
-                description="E-Commerce-Plattform mit modernem Design, Warenkorb-Funktion und sicherer Zahlungsabwicklung. Vollständig responsive und SEO-optimiert."
-                image="/project-boutique-luna.jpg"
-                category="E-Commerce"
-                technologies={["Next.js", "Stripe", "Tailwind CSS"]}
-                results="+80% Umsatzsteigerung"
-              />
-              
-              <ProjectCard
-                title="FitStark Studio"
-                description="Fitness-Studio-Website mit Online-Buchungssystem für Kurse, Mitgliederverwaltung und Blog. Moderne Animationen und intuitive Navigation."
-                image="/project-fitstark.jpg"
-                category="Fitness"
-                technologies={["React", "WordPress", "CSS"]}
-                results="+120 neue Mitglieder"
-              />
-            </motion.div>
-
-            {/* CTA Button */}
-            <motion.div 
-              className="mt-16 text-center"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeInUp}
-            >
-              <Button size="lg" variant="outline" className="group" disabled>
-                <span className="text-muted-foreground">Alle Projekte ansehen (Bald verfügbar)</span>
-                <ArrowRight className="ml-2 h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-1" />
-              </Button>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section - Minimalist Design */}
-      <section 
-        id="services"
-        ref={servicesReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-32 -mt-16 z-10 overflow-hidden section-reveal ${servicesReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Dot Pattern Background - Contained */}
-        <div className="absolute inset-0 bg-dot-pattern opacity-50" />
-        {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
-        
-        {/* Gradient Fade Effects for Smooth Transitions */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <section id="services" className="relative py-32 -mt-16 z-10 overflow-hidden">
+        {/* Background Decoration */}
+        <div className="absolute top-1/4 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
         
         <div className="container relative">
           <motion.div 
@@ -602,10 +500,10 @@ export default function Home() {
       </section>
 
       {/* Why Me Section - Redesigned */}
-      <section 
-        ref={whyMeReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${whyMeReveal.isVisible ? 'is-visible' : ''}`}
-      >
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+        <div className="absolute top-1/2 left-1/4 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
         
         <div className="container relative">
           {/* Header */}
@@ -625,155 +523,131 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Bento Grid Layout - Inspired by farisschmidt.de */}
-          <div className="mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              
-              {/* Branding Card - Top Left */}
-              <div className="lg:col-span-2 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-8 transition-all hover:border-primary/50">
-                <div className="flex h-full flex-col justify-center">
-                  <h3 className="mb-3 text-2xl font-bold text-white">
-                    Marktführer Branding
-                  </h3>
-                  <p className="text-base text-white/70 leading-relaxed">
-                    Eine <span className="text-primary font-semibold">"moderne"</span> und <span className="text-primary font-semibold">"professionelle"</span> Website bekommt du mittlerweile günstig an jeder Ecke. Bei uns liegt der Fokus darauf, die höchstmögliche Qualität und Wirkung herauszuholen.
+          {/* Content Grid */}
+          <div className="mx-auto max-w-6xl">
+            {/* Stats Row */}
+            <div className="mb-20 grid gap-8 md:grid-cols-3">
+              <div className="group text-center">
+                <div className="mb-4 text-4xl font-bold text-primary md:text-5xl transition-transform group-hover:scale-110">
+                  50+
+                </div>
+                <div className="text-lg font-semibold">Erfolgreiche Projekte</div>
+                <div className="text-sm text-muted-foreground">Für lokale Unternehmen</div>
+              </div>
+              <div className="group text-center">
+                <div className="mb-4 text-4xl font-bold text-primary md:text-5xl transition-transform group-hover:scale-110">
+                  5+
+                </div>
+                <div className="text-lg font-semibold">Jahre Erfahrung</div>
+                <div className="text-sm text-muted-foreground">Im Webdesign</div>
+              </div>
+              <div className="group text-center">
+                <div className="mb-4 text-4xl font-bold text-primary md:text-5xl transition-transform group-hover:scale-110">
+                  98%
+                </div>
+                <div className="text-lg font-semibold">Kundenzufriedenheit</div>
+                <div className="text-sm text-muted-foreground">Durchschnittliche Bewertung</div>
+              </div>
+            </div>
+
+            {/* Technologies & Industries */}
+            <div className="grid gap-12 md:grid-cols-2">
+              {/* Technologies */}
+              <div className="group">
+                <div className="mb-6">
+                  <h3 className="mb-2 text-2xl font-bold md:text-3xl">Moderne Technologien</h3>
+                  <p className="text-muted-foreground">
+                    Ich arbeite mit bewährten, zukunftssicheren Technologien
                   </p>
                 </div>
-              </div>
-
-              {/* Ranking List - Top Right */}
-              <div className="lg:col-span-2 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50">
-                <div className="flex h-full flex-col">
-                  <div className="mb-4 flex items-center justify-between">
-                    <h4 className="text-sm font-semibold text-white/60 uppercase tracking-wider">Die besten im Geschäft</h4>
-                    <Search className="h-4 w-4 text-white/40" />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    {[
-                      { rank: "#1", label: "Beste Kundenzufriedenheit" },
-                      { rank: "#2", label: "Schnellste Entwicklung" },
-                      { rank: "#3", label: "Beste Performance" },
-                      { rank: "#4", label: "Modernste Technologie" }
-                    ].map((item) => (
+                <div className="flex flex-wrap gap-3">
+                  {["React", "TypeScript", "Tailwind CSS", "Next.js", "WordPress"].map(
+                    (tech) => (
                       <div
-                        key={item.rank}
-                        className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white transition-all hover:border-primary/50 hover:bg-white/10"
+                        key={tech}
+                        className="rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium transition-all hover:border-primary hover:bg-primary/5 hover:scale-105"
                       >
-                        <span className="text-primary font-bold">{item.rank}</span>
-                        <span>{item.label}</span>
+                        {tech}
                       </div>
-                    ))}
-                  </div>
+                    )
+                  )}
                 </div>
               </div>
 
-              {/* Image Card - Middle Left */}
-              <div className="lg:col-span-2 lg:row-span-2 rounded-2xl bg-black border border-white/10 overflow-hidden transition-all hover:border-primary/50 group">
-                <div className="relative h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-black to-black" />
-                  <div className="relative h-full flex flex-col justify-end p-8">
-                    <div className="mb-4 h-48 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center">
-                      <Code className="h-24 w-24 text-primary/50" />
+              {/* Industries */}
+              <div className="group">
+                <div className="mb-6">
+                  <h3 className="mb-2 text-2xl font-bold md:text-3xl">Branchen-Expertise</h3>
+                  <p className="text-muted-foreground">
+                    Erfolgreiche Projekte in verschiedenen Branchen
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    "Gastronomie",
+                    "Handwerk",
+                    "Einzelhandel",
+                    "Gesundheit",
+                    "Dienstleistung",
+                  ].map((industry) => (
+                    <div
+                      key={industry}
+                      className="rounded-lg border border-border bg-background px-4 py-2 text-sm font-medium transition-all hover:border-primary hover:bg-primary/5 hover:scale-105"
+                    >
+                      {industry}
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-2">Detailliert geplant</h4>
-                    <p className="text-white/70">Jedes Projekt wird sorgfältig konzipiert und umgesetzt</p>
-                  </div>
+                  ))}
                 </div>
               </div>
+            </div>
 
-              {/* Stats Grid - Middle Right */}
-              <div className="lg:col-span-2 lg:row-span-2 grid grid-cols-2 gap-4">
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
-                  <div className="text-6xl font-bold text-primary mb-2">40+</div>
-                  <div className="text-sm font-medium text-white/70">Projekte</div>
+            {/* Features Grid */}
+            <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              <div className="group">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+                  <CheckCircle2 className="h-6 w-6" />
                 </div>
-                
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
-                  <div className="text-6xl font-bold text-primary mb-2">8+</div>
-                  <div className="text-sm font-medium text-white/70">Zufriedene Kunden</div>
-                </div>
-                
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
-                  <div className="text-6xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-sm font-medium text-white/70">Expertise</div>
-                </div>
-                
-                <div className="rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50 flex flex-col items-center justify-center text-center">
-                  <div className="text-6xl font-bold text-primary mb-2">4+</div>
-                  <div className="text-sm font-medium text-white/70">Jahre Erfahrung</div>
-                </div>
+                <h4 className="mb-2 font-bold">Persönliche Betreuung</h4>
+                <p className="text-sm text-muted-foreground">
+                  Direkter Kontakt während des gesamten Projekts
+                </p>
               </div>
-
-              {/* Strategy Card - Bottom Left */}
-              <div className="lg:col-span-1 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50">
-                <div className="flex h-full flex-col justify-center">
-                  <h4 className="text-lg font-bold text-white mb-4">Individuelle Strategien</h4>
-                  <div className="grid grid-cols-3 gap-2">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 border border-white/10" />
-                    ))}
-                  </div>
+              <div className="group">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+                  <CheckCircle2 className="h-6 w-6" />
                 </div>
+                <h4 className="mb-2 font-bold">Transparente Preise</h4>
+                <p className="text-sm text-muted-foreground">
+                  Keine versteckten Kosten oder Überraschungen
+                </p>
               </div>
-
-              {/* Results Table - Bottom Right */}
-              <div className="lg:col-span-3 lg:row-span-1 rounded-2xl bg-black border border-white/10 p-6 transition-all hover:border-primary/50">
-                <div className="flex h-full flex-col">
-                  <h4 className="text-lg font-bold text-white mb-4">Optimiert für echte Ergebnisse</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                    <div>
-                      <div className="text-white/50 mb-2">Letzte 30 Tage</div>
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-white/80">
-                          <span>Leads</span>
-                          <span className="text-primary font-semibold">+127%</span>
-                        </div>
-                        <div className="flex justify-between text-white/80">
-                          <span>Conversions</span>
-                          <span className="text-primary font-semibold">+89%</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-white/50 mb-2">Performance</div>
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-white/80">
-                          <span>Page Speed</span>
-                          <span className="text-primary font-semibold">98/100</span>
-                        </div>
-                        <div className="flex justify-between text-white/80">
-                          <span>SEO Score</span>
-                          <span className="text-primary font-semibold">95/100</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-white/50 mb-2">Technologie</div>
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-white/80">
-                          <span>React 19</span>
-                          <span className="text-primary font-semibold">Latest</span>
-                        </div>
-                        <div className="flex justify-between text-white/80">
-                          <span>TypeScript</span>
-                          <span className="text-primary font-semibold">5.0+</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div className="group">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+                  <CheckCircle2 className="h-6 w-6" />
                 </div>
+                <h4 className="mb-2 font-bold">Schnelle Umsetzung</h4>
+                <p className="text-sm text-muted-foreground">
+                  Ihre Website ist in 2-4 Wochen online
+                </p>
               </div>
-
+              <div className="group">
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-transform group-hover:scale-110">
+                  <CheckCircle2 className="h-6 w-6" />
+                </div>
+                <h4 className="mb-2 font-bold">Moderne Lösungen</h4>
+                <p className="text-sm text-muted-foreground">
+                  Zukunftssichere Technologien für langfristigen Erfolg
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section - Scrolling Reviews */}
-      <section 
-        ref={testimonialsReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-20 md:py-32 overflow-hidden section-reveal ${testimonialsReveal.isVisible ? 'is-visible' : ''}`}
-      >
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
         
         <div className="container relative">
           {/* Header */}
@@ -816,15 +690,88 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Projects Section */}
+      <section className="py-24 md:py-32">
+        <div className="container">
+          <div className="mx-auto max-w-6xl">
+            {/* Section Header */}
+            <motion.div 
+              className="mb-16 text-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+            >
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
+                <Target className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Portfolio</span>
+              </div>
+              <h2 className="mb-6 text-3xl font-bold leading-[1.3] md:text-4xl lg:text-5xl">
+                Ausgewählte{" "}
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Projekte
+                </span>
+              </h2>
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Echte Ergebnisse für echte Unternehmen – sehen Sie selbst
+              </p>
+            </motion.div>
+
+            {/* Projects Grid */}
+            <motion.div 
+              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              <ProjectCard
+                title="Bella Cucina Restaurant"
+                description="Moderne Restaurant-Website mit Online-Reservierungssystem und interaktiver Speisekarte. Optimiert für mobile Geräte und schnelle Ladezeiten."
+                image="/project-bella-cucina.jpg"
+                category="Gastronomie"
+                technologies={["React", "TypeScript", "Tailwind CSS"]}
+                results="+100% Online-Reservierungen"
+              />
+              
+              <ProjectCard
+                title="Boutique Luna Shop"
+                description="E-Commerce-Plattform mit modernem Design, Warenkorb-Funktion und sicherer Zahlungsabwicklung. Vollständig responsive und SEO-optimiert."
+                image="/project-boutique-luna.jpg"
+                category="E-Commerce"
+                technologies={["Next.js", "Stripe", "Tailwind CSS"]}
+                results="+80% Umsatzsteigerung"
+              />
+              
+              <ProjectCard
+                title="FitStark Studio"
+                description="Fitness-Studio-Website mit Online-Buchungssystem für Kurse, Mitgliederverwaltung und Blog. Moderne Animationen und intuitive Navigation."
+                image="/project-fitstark.jpg"
+                category="Fitness"
+                technologies={["React", "WordPress", "CSS"]}
+                results="+120 neue Mitglieder"
+              />
+            </motion.div>
+
+            {/* CTA Button */}
+            <motion.div 
+              className="mt-16 text-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <Button size="lg" variant="outline" className="group" disabled>
+                <span className="text-muted-foreground">Alle Projekte ansehen (Bald verfügbar)</span>
+                <ArrowRight className="ml-2 h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-1" />
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section 
-        ref={faqReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${faqReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Wave Pattern Background */}
-        <div className="absolute inset-0 bg-wave-pattern" />
-        {/* Subtle Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-transparent to-accent/8" />
+      <section className="py-24 md:py-32">
         <div className="container">
           <div className="mx-auto max-w-3xl">
             <div className="mb-16 text-center">
@@ -906,26 +853,91 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section - Enhanced with Animated Icons */}
-      <section 
-        ref={ctaReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-20 md:py-32 overflow-hidden section-reveal ${ctaReveal.isVisible ? 'is-visible' : ''}`}
-      >
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        {/* Smooth background transition */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background" />
+        
+        {/* Floating Success Icons - Animated */}
+        <motion.div
+          className="absolute left-[10%] top-20 text-primary/30 dark:text-primary/20"
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 10, 0],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Sparkles className="h-16 w-16" />
+        </motion.div>
+        
+        <motion.div
+          className="absolute right-[15%] top-32 text-accent/35 dark:text-accent/20"
+          animate={{
+            y: [0, 15, 0],
+            rotate: [0, -10, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5,
+          }}
+        >
+          <Zap className="h-20 w-20" />
+        </motion.div>
+        
+        <motion.div
+          className="absolute left-[15%] bottom-32 text-primary/25 dark:text-primary/15"
+          animate={{
+            y: [0, -15, 0],
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        >
+          <Star className="h-14 w-14 fill-current" />
+        </motion.div>
+        
+        <motion.div
+          className="absolute right-[10%] bottom-40 text-accent/30 dark:text-accent/15"
+          animate={{
+            y: [0, 20, 0],
+            rotate: [0, 15, 0],
+          }}
+          transition={{
+            duration: 5.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.5,
+          }}
+        >
+          <TrendingUp className="h-16 w-16" />
+        </motion.div>
         
         <div className="container relative">
-          <div className="mx-auto max-w-4xl">
-            {/* Glassmorphism Card */}
+          <div className="mx-auto max-w-5xl">
+            {/* Card with Animated Glowing Trail */}
             <motion.div 
-              className="relative"
+              className="group relative"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              {/* Card Content with Glassmorphism */}
-              <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-background/80 backdrop-blur-xl p-12 shadow-2xl md:p-16">
-                {/* Subtle gradient accent */}
-                <div className="absolute -right-32 -top-32 h-64 w-64 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 blur-3xl" />
-                <div className="absolute -left-32 -bottom-32 h-64 w-64 rounded-full bg-gradient-to-tr from-accent/10 to-primary/10 blur-3xl" />
+              {/* Card Content */}
+              <div className="relative overflow-hidden rounded-2xl border-2 border-primary/20 bg-background p-8 shadow-2xl md:p-12">
+                {/* Pulsierender Glow-Effekt */}
+                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary/30 via-blue-500/30 to-primary/30 opacity-75 blur-lg animate-pulse" />
+                <div className="absolute inset-0 rounded-2xl border-2 border-primary/40 animate-[pulse_3s_ease-in-out_infinite]" />
+                {/* Subtle accent */}
+                <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-primary/5 blur-3xl" />
                 
                 <div className="relative">
                   <div className="mb-10 text-center">
@@ -937,23 +949,25 @@ export default function Home() {
                     </p>
                   </div>
 
-                  {/* CTA Buttons - Elegant & Subtle */}
+                  {/* CTA Buttons - Enhanced Primary */}
                   <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
                     <Button 
                       size="lg" 
-                      className="group h-14 px-10 text-base font-semibold shadow-lg transition-all hover:shadow-xl hover:scale-105"
+                      className="group relative h-16 overflow-hidden px-12 text-lg font-black shadow-2xl shadow-primary/50 transition-all hover:scale-110 hover:shadow-primary/80"
                       asChild
                     >
                       <a href="/contact">
-                        <Calendar className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-                        Kostenloses Erstgespräch
-                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                        {/* Button glow effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 transition-opacity group-hover:opacity-20" />
+                        <Calendar className="relative mr-3 h-6 w-6 transition-transform group-hover:scale-110" />
+                        <span className="relative">Kostenloses Erstgespräch</span>
+                        <ArrowRight className="relative ml-3 h-6 w-6 transition-transform group-hover:translate-x-2" />
                       </a>
                     </Button>
                     <Button 
                       size="lg" 
                       variant="outline"
-                      className="group h-14 px-10 text-base font-semibold border-primary/30 transition-all hover:border-primary/50 hover:bg-primary/5 hover:scale-105"
+                      className="group h-16 border-2 px-12 text-lg font-bold transition-all hover:scale-105 hover:border-primary hover:bg-primary/5"
                       asChild
                     >
                       <a href="/portfolio">
