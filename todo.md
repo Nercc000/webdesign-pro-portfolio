@@ -319,3 +319,10 @@
 - [x] Alle Bottom-Gradients auf h-48 gesetzt (7 Sections)
 - [x] Insgesamt 12 Gradients vereinheitlicht
 - [x] Hero, Portfolio, Why Me, Testimonials, FAQ, CTA - alle angepasst
+
+
+## Leistungen → Why Me Gradient-Übergang fixen ✅ ABGESCHLOSSEN
+- [x] Problem identifiziert: Bottom-Gradients hatten KEINEN z-index!
+- [x] z-20 zu ALLEN 6 Bottom-Gradients hinzugefügt
+- [x] Jetzt liegen alle Gradients über Background-Patterns (Dot-Pattern, etc.)
+- [x] Portfolio, Leistungen, Why Me, Testimonials, FAQ, CTA - alle Bottom-Gradients z-20

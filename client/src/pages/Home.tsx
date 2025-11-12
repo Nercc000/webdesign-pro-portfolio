@@ -469,7 +469,7 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* Services Section - Minimalist Design */}
@@ -622,7 +622,7 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* Why Me Section - Redesigned */}
@@ -719,7 +719,7 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* Testimonials Section */}
@@ -773,7 +773,7 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* FAQ Section */}
@@ -870,7 +870,7 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* Final CTA Section */}
@@ -990,7 +990,7 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
     </Layout>
   );
