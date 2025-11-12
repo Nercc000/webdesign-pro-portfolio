@@ -271,3 +271,10 @@
 - [x] Alle Top-Gradients waren bereits vorhanden
 - [x] Getestet im Browser - alle Übergänge in beide Richtungen butterweich!
 - [x] Jede Section hat jetzt Top + Bottom Gradient für nahtlose Übergänge
+
+
+## Gradient-Übergänge Fixes ✅ ABGESCHLOSSEN
+- [x] FAQ → Testimonials Übergang geprüft (Reihenfolge ist Testimonials → FAQ, nicht umgekehrt)
+- [x] Why Me Section bg-muted/30 entfernt (war zu dunkel)
+- [x] Why Me Top-Gradient von h-32 auf h-48 erhöht (längerer, sanfterer Übergang)
+- [x] Getestet im Browser - Übergang jetzt viel heller und butterweicher!
