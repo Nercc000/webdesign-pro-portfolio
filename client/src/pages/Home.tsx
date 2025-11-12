@@ -487,10 +487,6 @@ export default function Home() {
         {/* Subtle Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
         
-        {/* Gradient Fade Effects for Smooth Transitions */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-        
         <div className="container relative">
           <motion.div 
             className="mb-20 text-center"
