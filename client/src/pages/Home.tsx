@@ -382,13 +382,15 @@ export default function Home() {
       </section>
 
       {/* Featured Projects Section */}
-      <section 
-        ref={projectsReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${projectsReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Gradient Overlay for smooth transition */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
-        <div className="container">
+      <div className="relative">
+        {/* Top Gradient Overlay */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        
+        <section 
+          ref={projectsReveal.ref as React.RefObject<HTMLElement>}
+          className={`relative py-24 md:py-32 overflow-hidden section-reveal ${projectsReveal.isVisible ? 'is-visible' : ''}`}
+        >
+          <div className="container">
           <div className="mx-auto max-w-6xl">
             {/* Section Header */}
             <motion.div 
@@ -464,18 +466,22 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        {/* Bottom Gradient for smooth transition */}
+        </section>
+        
+        {/* Bottom Gradient Overlay */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      </section>
+      </div>
 
       {/* Services Section - Minimalist Design */}
-      <section 
-        id="services"
-        ref={servicesReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-32 -mt-16 z-10 overflow-hidden section-reveal ${servicesReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Gradient Overlay for smooth transition */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+      <div className="relative">
+        {/* Top Gradient Overlay */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        
+        <section 
+          id="services"
+          ref={servicesReveal.ref as React.RefObject<HTMLElement>}
+          className={`relative py-32 -mt-16 z-10 overflow-hidden section-reveal ${servicesReveal.isVisible ? 'is-visible' : ''}`}
+        >
         {/* Dot Pattern Background - Contained */}
         <div className="absolute inset-0 bg-dot-pattern opacity-50" />
         {/* Subtle Gradient Overlay */}
@@ -617,17 +623,21 @@ export default function Home() {
 
 
         </div>
-        {/* Bottom Gradient for smooth transition */}
+        </section>
+        
+        {/* Bottom Gradient Overlay */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      </section>
+      </div>
 
       {/* Why Me Section - Redesigned */}
-      <section 
-        ref={whyMeReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${whyMeReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Gradient Overlay for smooth transition */}
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+      <div className="relative">
+        {/* Top Gradient Overlay */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        
+        <section 
+          ref={whyMeReveal.ref as React.RefObject<HTMLElement>}
+          className={`relative py-24 md:py-32 overflow-hidden section-reveal ${whyMeReveal.isVisible ? 'is-visible' : ''}`}
+        >
         
         <div className="container relative">
           {/* Header */}
@@ -710,18 +720,21 @@ export default function Home() {
             />
           </BentoGrid>
         </div>
-        {/* Bottom Gradient for smooth transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      </section>
-
-      {/* Testimonials Section - Scrolling Reviews */}
-      <section 
-        ref={testimonialsReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-20 md:py-32 overflow-hidden section-reveal ${testimonialsReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Gradient Overlay for smooth transition */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+        </section>
         
+        {/* Bottom Gradient Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="relative">
+        {/* Top Gradient Overlay */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        
+        <section 
+          ref={testimonialsReveal.ref as React.RefObject<HTMLElement>}
+          className={`relative py-20 md:py-32 overflow-hidden section-reveal ${testimonialsReveal.isVisible ? 'is-visible' : ''}`}
+        >        
         <div className="container relative">
           {/* Header */}
           <div className="mb-16 text-center">
@@ -761,17 +774,21 @@ export default function Home() {
             </Marquee>
           </div>
         </div>
-        {/* Bottom Gradient for smooth transition */}
+        </section>
+        
+        {/* Bottom Gradient Overlay */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      </section>
+      </div>
 
       {/* FAQ Section */}
-      <section 
-        ref={faqReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-24 md:py-32 overflow-hidden section-reveal ${faqReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Gradient Overlay for smooth transition */}
+      <div className="relative">
+        {/* Top Gradient Overlay */}
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        
+        <section 
+          ref={faqReveal.ref as React.RefObject<HTMLElement>}
+          className={`relative py-24 md:py-32 overflow-hidden section-reveal ${faqReveal.isVisible ? 'is-visible' : ''}`}
+        >
         {/* Wave Pattern Background */}
         <div className="absolute inset-0 bg-wave-pattern" />
         {/* Subtle Gradient Overlay */}
@@ -854,18 +871,21 @@ export default function Home() {
             </Accordion>
           </div>
         </div>
-        {/* Bottom Gradient for smooth transition */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      </section>
-
-      {/* Final CTA Section - Enhanced with Animated Icons */}
-      <section 
-        ref={ctaReveal.ref as React.RefObject<HTMLElement>}
-        className={`relative py-20 md:py-32 overflow-hidden section-reveal ${ctaReveal.isVisible ? 'is-visible' : ''}`}
-      >
-        {/* Gradient Overlay for smooth transition */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+        </section>
         
+        {/* Bottom Gradient Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      </div>
+
+      {/* Final CTA Section */}
+      <div className="relative">
+        {/* Top Gradient Overlay */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
+        
+        <section 
+          ref={ctaReveal.ref as React.RefObject<HTMLElement>}
+          className={`relative py-20 md:py-32 overflow-hidden section-reveal ${ctaReveal.isVisible ? 'is-visible' : ''}`}
+        >       
         <div className="container relative">
           <div className="mx-auto max-w-4xl">
             {/* Glassmorphism Card */}
@@ -971,9 +991,11 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        {/* Bottom Gradient for smooth transition */}
+        </section>
+        
+        {/* Bottom Gradient Overlay */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-      </section>
+      </div>
     </Layout>
   );
 }
