@@ -338,3 +338,5 @@
 - [x] Scroll Indicator am unteren Hero-Rand implementieren (animierter Pfeil, verschwindet beim Scrollen)
 
 - [x] Scroll Indicator Exit-Animation verbessern (AnimatePresence für smooth fade-out mit easeOutExpo)
+
+- [x] Scroll Indicator Probleme fixen (doppelte Pfeile h-8, hidden auf Mobile md:flex, bottom-4 statt bottom-8)

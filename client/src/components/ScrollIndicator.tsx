@@ -31,17 +31,17 @@ export default function ScrollIndicator() {
     <AnimatePresence mode="wait">
       {isVisible && (
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 cursor-pointer"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 cursor-pointer hidden md:flex"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }}
           onClick={handleClick}
         >
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-1">
             {/* Text */}
             <motion.span
-              className="text-sm font-medium text-muted-foreground"
+              className="text-xs font-semibold text-primary uppercase tracking-wider mb-1"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -50,11 +50,11 @@ export default function ScrollIndicator() {
               Scroll
             </motion.span>
 
-            {/* Animated Arrow */}
+            {/* Animated Double Arrows for better visibility */}
             <motion.div
-              className="flex flex-col items-center"
+              className="flex flex-col items-center -space-y-2"
               animate={{
-                y: [0, 8, 0],
+                y: [0, 6, 0],
               }}
               transition={{
                 duration: 1.5,
@@ -62,18 +62,9 @@ export default function ScrollIndicator() {
                 ease: "easeInOut",
               }}
             >
-              <ChevronDown className="h-6 w-6 text-primary" />
+              <ChevronDown className="h-8 w-8 text-primary" strokeWidth={2.5} />
+              <ChevronDown className="h-8 w-8 text-primary opacity-50" strokeWidth={2.5} />
             </motion.div>
-
-            {/* Decorative Line */}
-            <motion.div
-              className="w-px h-12 bg-gradient-to-b from-primary to-transparent"
-              initial={{ scaleY: 0, opacity: 0 }}
-              animate={{ scaleY: 1, opacity: 1 }}
-              exit={{ scaleY: 0, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              style={{ transformOrigin: "top" }}
-            />
           </div>
         </motion.div>
       )}
