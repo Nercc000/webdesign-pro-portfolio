@@ -464,6 +464,8 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+        {/* Bottom Gradient for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
 
       {/* Services Section - Minimalist Design */}
@@ -615,6 +617,8 @@ export default function Home() {
 
 
         </div>
+        {/* Bottom Gradient for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
 
       {/* Why Me Section - Redesigned */}
@@ -706,6 +710,8 @@ export default function Home() {
             />
           </BentoGrid>
         </div>
+        {/* Bottom Gradient for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
 
       {/* Testimonials Section - Scrolling Reviews */}
@@ -755,6 +761,8 @@ export default function Home() {
             </Marquee>
           </div>
         </div>
+        {/* Bottom Gradient for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
 
       {/* FAQ Section */}
@@ -846,6 +854,8 @@ export default function Home() {
             </Accordion>
           </div>
         </div>
+        {/* Bottom Gradient for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
 
       {/* Final CTA Section - Enhanced with Animated Icons */}
@@ -961,6 +971,8 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
+        {/* Bottom Gradient for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
       </section>
     </Layout>
   );
