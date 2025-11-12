@@ -384,7 +384,7 @@ export default function Home() {
       {/* Featured Projects Section */}
       <div className="relative">
         {/* Top Gradient Overlay */}
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-black to-transparent pointer-events-none z-20" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
         
         <section 
           ref={projectsReveal.ref as React.RefObject<HTMLElement>}
@@ -469,13 +469,13 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-blue-950/15 to-blue-950/25 pointer-events-none z-20" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* Services Section - Minimalist Design */}
       <div className="relative">
         {/* Top Gradient Overlay */}
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-blue-950/25 via-blue-950/15 to-transparent pointer-events-none z-20" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
         
         <section 
           id="services"
@@ -622,13 +622,13 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-transparent via-blue-950/15 to-black pointer-events-none z-20" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* Why Me Section - Redesigned */}
       <div className="relative">
         {/* Top Gradient Overlay */}
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-black via-blue-950/10 to-transparent pointer-events-none z-20" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
         
         <section 
           ref={whyMeReveal.ref as React.RefObject<HTMLElement>}
@@ -719,13 +719,13 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent pointer-events-none z-20" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* Testimonials Section */}
       <div className="relative">
         {/* Top Gradient Overlay */}
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-black to-transparent pointer-events-none z-20" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
         
         <section 
           ref={testimonialsReveal.ref as React.RefObject<HTMLElement>}
@@ -773,13 +773,13 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-blue-950/10 to-blue-950/20 pointer-events-none z-20" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
       {/* FAQ Section */}
       <div className="relative">
         {/* Top Gradient Overlay */}
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-blue-950/20 via-blue-950/10 to-transparent pointer-events-none z-20" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
         
         <section 
           ref={faqReveal.ref as React.RefObject<HTMLElement>}
@@ -870,13 +870,13 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-transparent via-primary/10 to-primary/20 pointer-events-none z-20" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
-      {/* CTA Section */}
+      {/* Final CTA Section */}
       <div className="relative">
         {/* Top Gradient Overlay */}
-        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent pointer-events-none z-20" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-20" />
         
         <section 
           ref={ctaReveal.ref as React.RefObject<HTMLElement>}
@@ -990,7 +990,7 @@ export default function Home() {
         </section>
         
         {/* Bottom Gradient Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-transparent to-black pointer-events-none z-20" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
     </Layout>
   );
