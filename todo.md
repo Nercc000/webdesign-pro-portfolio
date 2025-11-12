@@ -336,3 +336,5 @@
 - [x] Hero Section Animationen optimieren (schnellere Delays, Custom Easing, will-change, 36% schneller)
 
 - [x] Scroll Indicator am unteren Hero-Rand implementieren (animierter Pfeil, verschwindet beim Scrollen)
+
+- [x] Scroll Indicator Exit-Animation verbessern (AnimatePresence für smooth fade-out mit easeOutExpo)
