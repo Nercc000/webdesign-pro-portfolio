@@ -25,12 +25,14 @@ import { Link } from "wouter";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 
 
-// Animation Variants
+// Animation Variants - Optimized with Custom Easing
+const customEase = [0.43, 0.13, 0.23, 0.96] as const; // easeOutExpo for snappy feel
+
 const fadeIn = {
   hidden: { opacity: 0 },
   visible: { 
     opacity: 1,
-    transition: { duration: 0.6 }
+    transition: { duration: 0.5, ease: customEase }
   }
 };
 
@@ -39,7 +41,10 @@ const fadeInUp = {
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.6 }
+    transition: { 
+      duration: 0.5, 
+      ease: customEase
+    }
   }
 };
 
@@ -48,7 +53,10 @@ const fadeInDown = {
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.6 }
+    transition: { 
+      duration: 0.5, 
+      ease: customEase
+    }
   }
 };
 
@@ -57,7 +65,7 @@ const slideInLeft = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.7 }
+    transition: { duration: 0.6, ease: customEase }
   }
 };
 
@@ -66,7 +74,7 @@ const slideInRight = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.7 }
+    transition: { duration: 0.6, ease: customEase }
   }
 };
 
@@ -75,7 +83,10 @@ const scaleIn = {
   visible: { 
     opacity: 1, 
     scale: 1,
-    transition: { duration: 0.5 }
+    transition: { 
+      duration: 0.4, 
+      ease: customEase
+    }
   }
 };
 
@@ -84,7 +95,7 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.12 // Reduced from 0.15s for faster sequence
     }
   }
 };
@@ -291,6 +302,7 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
+              style={{ willChange: 'opacity, transform' }}
             >
               <motion.span className="block text-foreground" variants={fadeInDown}>Ihre Konkurrenz</motion.span>
               <motion.span className="block" variants={fadeIn}>
@@ -307,7 +319,8 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.2 }}
+              style={{ willChange: 'opacity, transform' }}
             >
               Wir erstellen Websites, die Ihnen mehr Kunden bringen.
               <br />
@@ -319,7 +332,8 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.4 }}
+              style={{ willChange: 'opacity, transform' }}
             >
               <motion.div variants={scaleIn}>
                 <Button 
@@ -355,7 +369,8 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              transition={{ delay: 0.9 }}
+              transition={{ delay: 0.6 }}
+              style={{ willChange: 'opacity, transform' }}
             >
               <motion.div className="flex items-center gap-2" variants={fadeInUp}>
                 <CheckCircle2 className="h-5 w-5 text-primary" />

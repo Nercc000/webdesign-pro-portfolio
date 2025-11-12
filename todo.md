@@ -330,3 +330,7 @@
 - [x] Dot-Pattern in Leistungen Section sichtbarer machen (opacity erhöht von 50 auf 75)
 
 - [x] Leistungen Section Animation optimieren (slideInLeft/Right → fadeInUp + will-change property)
+
+- [x] Loading Screen implementieren (wartet auf alle Ressourcen bevor Hero-Animationen starten)
+
+- [x] Hero Section Animationen optimieren (schnellere Delays, Custom Easing, will-change, 36% schneller)
