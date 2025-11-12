@@ -3,13 +3,20 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Code, Smartphone, Search, Headphones, CheckCircle2, Phone, Calendar, Sparkles, Zap, Target, Star, TrendingUp } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Search, Headphones, CheckCircle2, Phone, Calendar, Sparkles, Zap, Target, Star, TrendingUp, Briefcase, Users, Award } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Marquee } from "@/components/ui/marquee-magic";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { HeroDecorations } from "@/components/HeroDecorations";
 import { CodeSnippetIllustration, AnalyticsChartIllustration } from "@/components/ServicesIllustrations";
 import { motion } from "framer-motion";
+import { HeroFeatureCard } from "@/components/creative/HeroFeatureCard";
+import { GlassStatCard } from "@/components/creative/GlassStatCard";
+import { Visual3DCard } from "@/components/creative/Visual3DCard";
+import { TechStackShowcase } from "@/components/creative/TechStackShowcase";
+import { ProcessTimeline } from "@/components/creative/ProcessTimeline";
+import { PerformanceMetrics } from "@/components/creative/PerformanceMetrics";
+
 import { Link } from "wouter";
 import { useSectionReveal } from "@/hooks/useSectionReveal";
 import { BentoCard, BentoGrid } from "@/components/creative/BentoCard";
@@ -630,128 +637,94 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Bento Grid Layout - Modern & Animated */}
-          <BentoGrid className="mx-auto max-w-7xl">
-            {/* Branding Card - Top Left */}
-            <FeatureCard
-              title="Marktführer Branding"
-              description='Eine "moderne" und "professionelle" Website bekommt du mittlerweile günstig an jeder Ecke. Bei uns liegt der Fokus darauf, die höchstmögliche Qualität und Wirkung herauszuholen.'
-              delay={0}
-              showBeam
-              className="lg:col-span-2 lg:row-span-1"
-            />
-
-            {/* Ranking List - Top Right */}
-            <RankingList
-              items={[
-                { rank: "#1", label: "Beste Kundenzufriedenheit" },
-                { rank: "#2", label: "Schnellste Entwicklung" },
-                { rank: "#3", label: "Beste Performance" },
-                { rank: "#4", label: "Modernste Technologie" }
-              ]}
-              delay={0.1}
-              className="lg:col-span-2 lg:row-span-1"
-            />
-
-            {/* Code Showcase - Middle Left */}
-            <CodeShowcase
-              title="Detailliert geplant"
-              description="Jedes Projekt wird sorgfältig konzipiert und umgesetzt"
-              delay={0.2}
-              className="lg:col-span-2 lg:row-span-2"
-            />
-
-            {/* Stats Grid - Middle Right */}
-            <div className="lg:col-span-2 lg:row-span-2 grid grid-cols-2 gap-4">
-              <StatCard value={40} suffix="+" label="Projekte" delay={0.3} />
-              <StatCard value={8} suffix="+" label="Zufriedene Kunden" delay={0.35} />
-              <StatCard value={100} suffix="%" label="Expertise" delay={0.4} />
-              <StatCard value={4} suffix="+" label="Jahre Erfahrung" delay={0.45} />
-            </div>
-
-            {/* Strategy Card - Bottom Left */}
-            <BentoCard delay={0.5} className="lg:col-span-1 lg:row-span-1">
-              <div className="flex h-full flex-col justify-center">
-                <h4 className="text-lg font-bold mb-4">Individuelle Strategien</h4>
-                <div className="grid grid-cols-3 gap-2">
-                  {[1, 2, 3].map((i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.5 + i * 0.1, type: "spring" }}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="aspect-square rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 border border-border"
-                    />
-                  ))}
-                </div>
+          {/* Bento Grid Layout - Einfach & Funktionierend */}
+          <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Statistik-Karten */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+            >
+              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+                <Briefcase className="h-6 w-6 text-primary" />
               </div>
-            </BentoCard>
+              <div className="text-4xl font-bold text-foreground">40+</div>
+              <div className="mt-2 text-sm text-muted-foreground">Erfolgreich abgeschlossene Projekte</div>
+            </motion.div>
 
-            {/* Results Table - Bottom Right */}
-            <BentoCard delay={0.6} className="lg:col-span-3 lg:row-span-1">
-              <div className="flex h-full flex-col">
-                <h4 className="text-lg font-bold mb-4">Optimiert für echte Ergebnisse</h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.7 }}
-                  >
-                    <div className="text-muted-foreground mb-2">Letzte 30 Tage</div>
-                    <div className="space-y-1">
-                      <div className="flex justify-between">
-                        <span className="text-foreground">Leads</span>
-                        <span className="text-primary font-semibold">+127%</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-foreground">Conversions</span>
-                        <span className="text-primary font-semibold">+89%</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.8 }}
-                  >
-                    <div className="text-muted-foreground mb-2">Performance</div>
-                    <div className="space-y-1">
-                      <div className="flex justify-between">
-                        <span className="text-foreground">Page Speed</span>
-                        <span className="text-primary font-semibold">98/100</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-foreground">SEO Score</span>
-                        <span className="text-primary font-semibold">95/100</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.9 }}
-                  >
-                    <div className="text-muted-foreground mb-2">Technologie</div>
-                    <div className="space-y-1">
-                      <div className="flex justify-between">
-                        <span className="text-foreground">React 19</span>
-                        <span className="text-primary font-semibold">Latest</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-foreground">TypeScript</span>
-                        <span className="text-primary font-semibold">5.0+</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+            >
+              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+                <Users className="h-6 w-6 text-primary" />
               </div>
-            </BentoCard>
-          </BentoGrid>
+              <div className="text-4xl font-bold text-foreground">8+</div>
+              <div className="mt-2 text-sm text-muted-foreground">Zufriedene Kunden</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+            >
+              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+                <Award className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-4xl font-bold text-foreground">100%</div>
+              <div className="mt-2 text-sm text-muted-foreground">Expertise & Qualität</div>
+            </motion.div>
+
+            {/* Feature-Karten */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+            >
+              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+                <Zap className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-foreground">Schnelle Umsetzung</h3>
+              <p className="text-sm text-muted-foreground">Ihre Website ist in 2 Wochen fertig und online</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+            >
+              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+                <Star className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-foreground">Modernes Design</h3>
+              <p className="text-sm text-muted-foreground">Zeitgemäße Designs mit neuesten Technologien</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:shadow-lg hover:shadow-primary/10"
+            >
+              <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3">
+                <TrendingUp className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-foreground">Messbare Ergebnisse</h3>
+              <p className="text-sm text-muted-foreground">Mehr Kunden und höhere Umsätze garantiert</p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
