@@ -725,8 +725,8 @@ export default function Home() {
               className="group relative col-span-1 md:col-span-2 lg:col-span-2 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
               {/* Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10">
-                <div className="absolute inset-0 flex items-center justify-center opacity-10">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent">
+                <div className="absolute inset-0 flex items-center justify-center opacity-5">
                   <Zap className="w-48 h-48 text-primary" />
                 </div>
               </div>
@@ -779,9 +779,9 @@ export default function Home() {
               className="group relative col-span-1 md:col-span-2 lg:col-span-1 overflow-hidden rounded-3xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
             >
               {/* Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10">
-                <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                  <Star className="w-32 h-32 text-primary" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent">
+                <div className="absolute inset-0 flex items-center justify-center opacity-5">
+                  <Star className="w-48 h-48 text-primary" />
                 </div>
               </div>
               
