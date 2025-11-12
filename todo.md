@@ -311,3 +311,11 @@
 ## Leistungen Section - Bottom-Gradient anpassen ✅ ABGESCHLOSSEN
 - [x] Bottom-Gradient von h-32 auf h-48 erhöht (Zeile 625)
 - [x] Symmetrisch mit Top-Gradient (beide h-48)
+
+
+## Alle Section-Gradients vereinheitlichen ✅ ABGESCHLOSSEN
+- [x] Alle Sections aufgelistet und Gradient-Höhen dokumentiert (gradient_audit.md)
+- [x] Alle Top-Gradients auf h-48 + z-20 gesetzt (7 Sections)
+- [x] Alle Bottom-Gradients auf h-48 gesetzt (7 Sections)
+- [x] Insgesamt 12 Gradients vereinheitlicht
+- [x] Hero, Portfolio, Why Me, Testimonials, FAQ, CTA - alle angepasst
