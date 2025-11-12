@@ -472,6 +472,9 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-20" />
       </div>
 
+      {/* Transition Gradient: Portfolio → Leistungen */}
+      <div className="relative h-48 bg-gradient-to-b from-background to-transparent" />
+
       {/* Services Section - Minimalist Design */}
       <div className="relative">
         {/* Top Gradient Overlay */}
@@ -483,7 +486,7 @@ export default function Home() {
           className={`relative py-32 -mt-16 z-10 overflow-hidden section-reveal ${servicesReveal.isVisible ? 'is-visible' : ''}`}
         >
         {/* Dot Pattern Background - Contained */}
-        <div className="absolute inset-0 bg-dot-pattern opacity-50" />
+        <div className="absolute inset-0 bg-dot-pattern opacity-75" />
         {/* Subtle Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
         

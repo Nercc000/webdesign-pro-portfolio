@@ -326,3 +326,5 @@
 - [x] z-20 zu ALLEN 6 Bottom-Gradients hinzugefügt
 - [x] Jetzt liegen alle Gradients über Background-Patterns (Dot-Pattern, etc.)
 - [x] Portfolio, Leistungen, Why Me, Testimonials, FAQ, CTA - alle Bottom-Gradients z-20
+
+- [x] Dot-Pattern in Leistungen Section sichtbarer machen (opacity erhöht von 50 auf 75)
