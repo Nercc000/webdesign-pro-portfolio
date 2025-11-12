@@ -340,3 +340,6 @@
 - [x] Scroll Indicator Exit-Animation verbessern (AnimatePresence für smooth fade-out mit easeOutExpo)
 
 - [x] Scroll Indicator Probleme fixen (doppelte Pfeile h-8, hidden auf Mobile md:flex, bottom-4 statt bottom-8)
+
+- [x] Scroll Indicator auf einzelnen Pfeil geändert (h-10 w-10 strokeWidth-3)
+- [x] LCP Performance optimiert (LoadingScreen entfernt - Hero rendert sofort ohne Verzögerung)

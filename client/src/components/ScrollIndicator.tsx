@@ -38,10 +38,10 @@ export default function ScrollIndicator() {
           transition={{ duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] }}
           onClick={handleClick}
         >
-          <div className="flex flex-col items-center gap-1">
+          <div className="flex flex-col items-center gap-2">
             {/* Text */}
             <motion.span
-              className="text-xs font-semibold text-primary uppercase tracking-wider mb-1"
+              className="text-xs font-semibold text-primary uppercase tracking-wider"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -50,11 +50,11 @@ export default function ScrollIndicator() {
               Scroll
             </motion.span>
 
-            {/* Animated Double Arrows for better visibility */}
+            {/* Single Large Animated Arrow */}
             <motion.div
-              className="flex flex-col items-center -space-y-2"
+              className="flex flex-col items-center"
               animate={{
-                y: [0, 6, 0],
+                y: [0, 8, 0],
               }}
               transition={{
                 duration: 1.5,
@@ -62,8 +62,7 @@ export default function ScrollIndicator() {
                 ease: "easeInOut",
               }}
             >
-              <ChevronDown className="h-8 w-8 text-primary" strokeWidth={2.5} />
-              <ChevronDown className="h-8 w-8 text-primary opacity-50" strokeWidth={2.5} />
+              <ChevronDown className="h-10 w-10 text-primary" strokeWidth={3} />
             </motion.div>
           </div>
         </motion.div>
