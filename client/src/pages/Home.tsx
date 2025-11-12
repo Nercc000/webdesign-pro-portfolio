@@ -6,7 +6,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, Code, Smartphone, Search, Headphones, CheckCircle2, Phone, Calendar, Sparkles, Zap, Target, Star, TrendingUp, Briefcase, Users, Award, Code2 } from "lucide-react";
 
 import { NumberTicker } from '@/components/ui/number-ticker';
-import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+import { CodeEditorAnimation } from "@/components/CodeEditorAnimation";
+import { ProjectsMarquee } from "@/components/ProjectsMarquee";
+import { CustomerAvatars } from "@/components/CustomerAvatars";
+import { TimelineAnimation } from "@/components/TimelineAnimation";
+import { QualityBadge } from "@/components/QualityBadge";
+import { ColorPalette } from "@/components/ColorPalette";
 import Layout from "@/components/Layout";
 import { Marquee } from "@/components/ui/marquee-magic";
 import { AuroraText } from "@/components/ui/aurora-text";
@@ -636,12 +642,7 @@ export default function Home() {
             <BentoCard
               name="Warum WebDesignPro?"
               className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2"
-              background={
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent">
-                  <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-                </div>
-              }
+              background={<CodeEditorAnimation />}
               Icon={Code2}
               description="Wir kombinieren modernste Technologie mit kreativem Design, um Websites zu schaffen, die nicht nur gut aussehen, sondern auch Ergebnisse liefern."
               href="#contact"
@@ -651,13 +652,7 @@ export default function Home() {
             <BentoCard
               name="40+ Projekte"
               className="col-span-1"
-              background={
-                <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                  <div className="text-9xl font-bold text-primary">
-                    <NumberTicker value={40} />+
-                  </div>
-                </div>
-              }
+              background={<ProjectsMarquee />}
               Icon={Briefcase}
               description="Erfolgreich abgeschlossene Projekte"
               href="#portfolio"
@@ -667,13 +662,7 @@ export default function Home() {
             <BentoCard
               name="8+ Kunden"
               className="col-span-1"
-              background={
-                <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                  <div className="text-9xl font-bold text-primary">
-                    <NumberTicker value={8} />+
-                  </div>
-                </div>
-              }
+              background={<CustomerAvatars />}
               Icon={Users}
               description="Zufriedene Kunden"
               href="#testimonials"
@@ -683,13 +672,7 @@ export default function Home() {
             <BentoCard
               name="Schnelle Umsetzung"
               className="col-span-1 md:col-span-2 lg:col-span-2"
-              background={
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                    <Zap className="w-48 h-48 text-primary" />
-                  </div>
-                </div>
-              }
+              background={<TimelineAnimation />}
               Icon={Zap}
               description="Ihre Website ist in 2 Wochen fertig und online. Kein langes Warten, schnelle Ergebnisse."
               href="#services"
@@ -699,13 +682,7 @@ export default function Home() {
             <BentoCard
               name="100% Qualität"
               className="col-span-1"
-              background={
-                <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                  <div className="text-9xl font-bold text-primary">
-                    <NumberTicker value={100} />%
-                  </div>
-                </div>
-              }
+              background={<QualityBadge />}
               Icon={Award}
               description="Expertise & Qualität"
               href="#about"
@@ -715,13 +692,7 @@ export default function Home() {
             <BentoCard
               name="Modernes Design"
               className="col-span-1"
-              background={
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                    <Star className="w-48 h-48 text-primary" />
-                  </div>
-                </div>
-              }
+              background={<ColorPalette />}
               Icon={Star}
               description="Zeitgemäße Designs mit neuesten Technologien"
               href="#services"
