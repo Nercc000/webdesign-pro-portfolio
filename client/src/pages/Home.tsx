@@ -771,7 +771,7 @@ export default function Home() {
         className={`relative py-24 md:py-32 overflow-hidden section-reveal ${faqReveal.isVisible ? 'is-visible' : ''}`}
       >
         {/* Gradient Overlay for smooth transition */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
         {/* Wave Pattern Background */}
         <div className="absolute inset-0 bg-wave-pattern" />
         {/* Subtle Gradient Overlay */}

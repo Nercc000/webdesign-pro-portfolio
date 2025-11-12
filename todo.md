@@ -278,3 +278,10 @@
 - [x] Why Me Section bg-muted/30 entfernt (war zu dunkel)
 - [x] Why Me Top-Gradient von h-32 auf h-48 erhöht (längerer, sanfterer Übergang)
 - [x] Getestet im Browser - Übergang jetzt viel heller und butterweicher!
+
+
+## FAQ Gradient + Section-Animationen entfernen + Smooth-Scroll ✅ ABGESCHLOSSEN
+- [x] FAQ Section Top-Gradient optimiert (h-48 statt h-32, z-10 hinzugefügt)
+- [x] Section-Reveal-Animationen entfernt (Fade-In von unten deaktiviert)
+- [x] Smooth-Scroll-Verhalten aktiviert (scroll-behavior: smooth in index.css)
+- [x] Getestet im Browser - Sections erscheinen sofort, kein Fade-In mehr!

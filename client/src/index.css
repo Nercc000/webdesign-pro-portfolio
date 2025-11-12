@@ -224,8 +224,12 @@ html {
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -246,27 +250,14 @@ html {
 }
 
 @layer components {
-  /* Section Reveal Animations */
+  /* Section Reveal Animations - DISABLED */
   .section-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* Animations removed - sections appear immediately */
   }
 
   .section-reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+    /* Animations removed */
   }
-
-  /* Stagger animation delays for child elements */
-  .section-reveal.is-visible > * {
-    animation: fadeInUp 0.6s ease-out forwards;
-  }
-
-  .section-reveal.is-visible > *:nth-child(1) { animation-delay: 0.1s; }
-  .section-reveal.is-visible > *:nth-child(2) { animation-delay: 0.2s; }
-  .section-reveal.is-visible > *:nth-child(3) { animation-delay: 0.3s; }
-  .section-reveal.is-visible > *:nth-child(4) { animation-delay: 0.4s; }
 
   @keyframes fadeInUp {
     from {
