@@ -343,3 +343,5 @@
 
 - [x] Scroll Indicator auf einzelnen Pfeil geändert (h-10 w-10 strokeWidth-3)
 - [x] LCP Performance optimiert (LoadingScreen entfernt - Hero rendert sofort ohne Verzögerung)
+
+- [x] LoadingScreen mit "Nur beim ersten Besuch" Logik implementiert (localStorage VISITED_KEY)

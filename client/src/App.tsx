@@ -4,6 +4,9 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import LoadingScreen from "./components/LoadingScreen";
+import { usePageLoading } from "./hooks/usePageLoading";
+import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
@@ -27,12 +30,20 @@ function Router() {
 }
 
 function App() {
+  const isLoading = usePageLoading();
+
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light" switchable>
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <AnimatePresence mode="wait">
+            {isLoading ? (
+              <LoadingScreen key="loading" />
+            ) : (
+              <Router key="content" />
+            )}
+          </AnimatePresence>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
