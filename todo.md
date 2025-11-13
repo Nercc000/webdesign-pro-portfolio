@@ -356,3 +356,5 @@
 - [x] GitHub Repository mit neuesten Änderungen aktualisiert (FAQ z-index Fix gepusht)
 
 - [x] Hero Titel Mobile Typography gefixt (text-4xl → text-5xl auf Mobile, sm:text-6xl)
+
+- [x] Hero Titel Header Overlap gefixt (pt-24 → pt-32 auf Mobile für mehr Abstand zum Header)
