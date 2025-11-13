@@ -363,3 +363,7 @@
 - [x] GitHub Repository mit Mobile-Fixes aktualisiert (Commit bca692f gepusht)
 
 - [x] Bento Grid Beschreibungen entfernt (description optional gemacht, alle 6 Cards nur mit Titel)
+
+- [x] Bento Grid Card Farbe im Dark Mode geändert (schwarz mit blauem Gradient from-black via-blue-950/20 to-black)
+- [x] Bento Grid Titel angepasst (6 neue Titel: Technologie trifft Design, Bewährte Erfahrung, etc.)
+- [x] Bunte Farben bei ProjectsMarquee entfernt (einheitlich bg-primary/5 statt bunte Gradients)

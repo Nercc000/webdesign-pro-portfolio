@@ -682,7 +682,7 @@ export default function Home() {
           {/* Bento Grid Layout - Magic UI BentoCard */}
           <BentoGrid className="mx-auto max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <BentoCard
-              name="Warum WebDesignPro?"
+              name="Technologie trifft Design"
               className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 [&_.p-6]:pt-2 [&_h3]:text-base [&_p]:text-sm"
               background={<CodeEditorAnimation />}
               Icon={Code2}
@@ -691,7 +691,7 @@ export default function Home() {
             />
 
             <BentoCard
-              name="40+ Projekte"
+              name="Bewährte Erfahrung"
               className="col-span-1"
               background={<ProjectsMarquee />}
               Icon={Briefcase}
@@ -700,7 +700,7 @@ export default function Home() {
             />
 
             <BentoCard
-              name="8+ Kunden"
+              name="Vertrauen & Partnerschaft"
               className="col-span-1"
               background={<CustomerAvatars />}
               Icon={Users}
@@ -709,7 +709,7 @@ export default function Home() {
             />
 
             <BentoCard
-              name="Schnelle Umsetzung"
+              name="Fertig in 2 Wochen"
               className="col-span-1 md:col-span-2 lg:col-span-2"
               background={<TimelineAnimation />}
               Icon={Zap}
@@ -718,7 +718,7 @@ export default function Home() {
             />
 
             <BentoCard
-              name="100% Qualität"
+              name="Premium-Qualität garantiert"
               className="col-span-1"
               background={<QualityBadge />}
               Icon={Award}
@@ -727,7 +727,7 @@ export default function Home() {
             />
 
             <BentoCard
-              name="Modernes Design"
+              name="Zeitgemäße Ästhetik"
               className="col-span-1"
               background={<ColorPalette />}
               Icon={Star}
