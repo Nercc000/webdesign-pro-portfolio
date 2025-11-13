@@ -299,7 +299,7 @@ export default function Home() {
 
             {/* Main Headline - Problem Focused */}
             <motion.h1 
-              className="mb-6 text-4xl font-bold tracking-tight leading-[1.2] sm:text-5xl md:text-7xl lg:text-8xl"
+              className="mb-6 text-5xl font-bold tracking-tight leading-[1.2] sm:text-6xl md:text-7xl lg:text-8xl"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}

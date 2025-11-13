@@ -352,3 +352,7 @@
 - [x] Neues GitHub Repo erstellen und komplette Website pushen (https://github.com/Nercc000/webdesign-pro-portfolio)
 
 - [x] FAQ Accordion z-index Problem gefixt (Container relative z-10 hinzugefügt)
+
+- [x] GitHub Repository mit neuesten Änderungen aktualisiert (FAQ z-index Fix gepusht)
+
+- [x] Hero Titel Mobile Typography gefixt (text-4xl → text-5xl auf Mobile, sm:text-6xl)
