@@ -336,10 +336,10 @@ export default function Home() {
               transition={{ delay: 0.4 }}
               style={{ willChange: 'opacity, transform' }}
             >
-              <motion.div variants={scaleIn}>
+              <motion.div variants={scaleIn} className="flex flex-col items-center gap-2">
                 <Button 
                   size="lg" 
-                  className="h-16 px-12 text-lg font-bold shadow-2xl shadow-primary/50 transition-all hover:scale-105 hover:shadow-primary/70"
+                  className="relative h-16 px-12 text-lg font-bold shadow-2xl shadow-primary/50 transition-all hover:scale-105 hover:shadow-primary/70 animate-pulse-glow"
                   asChild
                 >
                   <a href="/contact">
@@ -348,6 +348,9 @@ export default function Home() {
                     <ArrowRight className="ml-3 h-6 w-6" />
                   </a>
                 </Button>
+                <span className="text-sm font-medium text-primary/80 animate-fade-in">
+                  🔥 Nur noch 3 Plätze frei diese Woche
+                </span>
               </motion.div>
               <motion.div variants={scaleIn}>
                 <Button 

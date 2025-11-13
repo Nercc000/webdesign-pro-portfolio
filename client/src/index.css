@@ -50,6 +50,32 @@ html {
     }
   }
 
+  /* CTA Pulse Glow Animation */
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(59, 130, 246, 0.2);
+    }
+  }
+
+  /* Fade In Animation */
+  --animate-fade-in: fade-in 0.5s ease-in;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @keyframes aurora {
     0% {
       background-position: 0% 50%;
