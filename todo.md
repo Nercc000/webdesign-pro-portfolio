@@ -345,3 +345,5 @@
 - [x] LCP Performance optimiert (LoadingScreen entfernt - Hero rendert sofort ohne Verzögerung)
 
 - [x] LoadingScreen mit "Nur beim ersten Besuch" Logik implementiert (localStorage VISITED_KEY)
+
+- [x] FAQ Accordion mit smooth Animationen optimiert (ChevronDown Icon h-5 w-5, rotate-180 Animation)

@@ -829,7 +829,7 @@ export default function Home() {
 
             <Accordion type="single" collapsible defaultValue="item-1" className="w-full space-y-4">
               <AccordionItem value="item-1" className="rounded-lg border border-border bg-card px-6 shadow-sm transition-all hover:shadow-md">
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline [&>svg]:h-5 [&>svg]:w-5">
                   Was kostet eine professionelle Website?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -838,7 +838,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-2" className="rounded-lg border border-border bg-card px-6 shadow-sm transition-all hover:shadow-md">
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline [&>svg]:h-5 [&>svg]:w-5">
                   Wie lange dauert die Erstellung einer Website?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -847,7 +847,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-3" className="rounded-lg border border-border bg-card px-6 shadow-sm transition-all hover:shadow-md">
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline [&>svg]:h-5 [&>svg]:w-5">
                   Welche Technologien verwenden Sie?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -856,7 +856,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-4" className="rounded-lg border border-border bg-card px-6 shadow-sm transition-all hover:shadow-md">
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline [&>svg]:h-5 [&>svg]:w-5">
                   Bieten Sie auch Wartung und Support an?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -865,7 +865,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-5" className="rounded-lg border border-border bg-card px-6 shadow-sm transition-all hover:shadow-md">
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline [&>svg]:h-5 [&>svg]:w-5">
                   Kann ich meine Website selbst aktualisieren?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -874,7 +874,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-6" className="rounded-lg border border-border bg-card px-6 shadow-sm transition-all hover:shadow-md">
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline [&>svg]:h-5 [&>svg]:w-5">
                   Wie läuft die Zusammenarbeit ab?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -883,7 +883,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-7" className="rounded-lg border border-border bg-card px-6 shadow-sm transition-all hover:shadow-md">
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline [&>svg]:h-5 [&>svg]:w-5">
                   Was passiert, wenn mir das Ergebnis nicht gefällt?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
