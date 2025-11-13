@@ -686,7 +686,6 @@ export default function Home() {
               className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 [&_.p-6]:pt-2 [&_h3]:text-base [&_p]:text-sm"
               background={<CodeEditorAnimation />}
               Icon={Code2}
-              description="Wir kombinieren modernste Technologie mit kreativem Design, um Websites zu schaffen, die nicht nur gut aussehen, sondern auch Ergebnisse liefern."
               href="#contact"
               cta="Jetzt starten"
             />
@@ -696,7 +695,6 @@ export default function Home() {
               className="col-span-1"
               background={<ProjectsMarquee />}
               Icon={Briefcase}
-              description="Erfolgreich abgeschlossene Projekte"
               href="#portfolio"
               cta="Projekte ansehen"
             />
@@ -706,7 +704,6 @@ export default function Home() {
               className="col-span-1"
               background={<CustomerAvatars />}
               Icon={Users}
-              description="Zufriedene Kunden"
               href="#testimonials"
               cta="Referenzen ansehen"
             />
@@ -716,7 +713,6 @@ export default function Home() {
               className="col-span-1 md:col-span-2 lg:col-span-2"
               background={<TimelineAnimation />}
               Icon={Zap}
-              description="Ihre Website ist in 2 Wochen fertig und online. Kein langes Warten, schnelle Ergebnisse."
               href="#services"
               cta="Mehr erfahren"
             />
@@ -726,7 +722,6 @@ export default function Home() {
               className="col-span-1"
               background={<QualityBadge />}
               Icon={Award}
-              description="Expertise & Qualität"
               href="#about"
               cta="Über mich"
             />
@@ -736,7 +731,6 @@ export default function Home() {
               className="col-span-1"
               background={<ColorPalette />}
               Icon={Star}
-              description="Zeitgemäße Designs mit neuesten Technologien"
               href="#services"
               cta="Services ansehen"
             />

@@ -359,3 +359,7 @@
 
 - [x] Hero Titel Header Overlap gefixt (pt-24 → pt-32 auf Mobile für mehr Abstand zum Header)
 - [x] Hero Header Overlap mit responsive Lösung gefixt (h-screen → min-h-screen + py-32 md:py-24)
+
+- [x] GitHub Repository mit Mobile-Fixes aktualisiert (Commit bca692f gepusht)
+
+- [x] Bento Grid Beschreibungen entfernt (description optional gemacht, alle 6 Cards nur mit Titel)
