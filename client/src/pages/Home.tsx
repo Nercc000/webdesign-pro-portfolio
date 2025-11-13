@@ -287,7 +287,7 @@ export default function Home() {
   return (
     <Layout className="bg-gradient-to-b from-background via-primary/3 via-30% via-primary/5 via-50% via-primary/3 via-70% to-background">
       {/* Hero Section - First Impression */}
-      <section className="relative h-screen flex items-center overflow-hidden pt-32 md:pt-0">
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden py-32 md:py-24">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         
