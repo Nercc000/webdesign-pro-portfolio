@@ -815,7 +815,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-wave-pattern" />
         {/* Subtle Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-transparent to-accent/8" />
-        <div className="container">
+        <div className="container relative z-10">
           <div className="mx-auto max-w-3xl">
             <div className="mb-16 text-center">
               <Badge className="mb-4">FAQ</Badge>

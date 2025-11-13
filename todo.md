@@ -350,3 +350,5 @@
 - [x] FAQ komplett redesignt mit FAQ Tabs Component (Plus-Icon 45° Rotation, Gradient Blur Background, smooth Framer Motion)
 - [x] FAQ Tabs entfernen und durch cleanes minimalistisches Accordion ersetzen (nur border-b Linien, py-6 spacing)
 - [x] Neues GitHub Repo erstellen und komplette Website pushen (https://github.com/Nercc000/webdesign-pro-portfolio)
+
+- [x] FAQ Accordion z-index Problem gefixt (Container relative z-10 hinzugefügt)
