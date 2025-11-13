@@ -166,7 +166,7 @@ const TestimonialCard = ({ name, company, text, rating, logo, demoLink }: { name
   
   return (
     <motion.div 
-      className="mx-4 w-[400px] flex-shrink-0"
+      className="mx-2 md:mx-4 w-[280px] md:w-[400px] flex-shrink-0"
       style={{ perspective: 1000, transformStyle: 'preserve-3d' }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -179,34 +179,34 @@ const TestimonialCard = ({ name, company, text, rating, logo, demoLink }: { name
       transition={{ duration: 0.3, ease: 'easeOut' }}
     >
       <Card className="h-full border-primary/10 bg-card/50 backdrop-blur shadow-lg transition-all duration-300 hover:border-primary/30 hover:shadow-2xl">
-      <CardContent className="p-6">
+      <CardContent className="p-4 md:p-6">
         {/* Rating Stars */}
-        <div className="mb-4 flex gap-1">
+        <div className="mb-3 flex gap-1">
           {Array.from({ length: rating }).map((_, i) => (
-            <svg key={i} className="h-5 w-5 fill-primary text-primary" viewBox="0 0 20 20">
+            <svg key={i} className="h-4 w-4 md:h-5 md:w-5 fill-primary text-primary" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
           ))}
         </div>
         
         {/* Testimonial Text */}
-        <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+        <p className="mb-4 text-xs md:text-sm leading-relaxed text-muted-foreground line-clamp-4">
           "{text}"
         </p>
         
         {/* Author */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 md:gap-3">
             {logo ? (
-              <img src={logo} alt={company} loading="lazy" className="h-12 w-12 rounded-full object-contain bg-white p-1" />
+              <img src={logo} alt={company} loading="lazy" className="h-10 w-10 md:h-12 md:w-12 rounded-full object-contain bg-white p-1" />
             ) : (
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 font-bold text-primary">
+              <div className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-primary/10 font-bold text-primary text-sm md:text-base">
                 {name.charAt(0)}
               </div>
             )}
             <div>
-              <div className="font-semibold">{name}</div>
-              <div className="text-sm text-muted-foreground">{company}</div>
+              <div className="font-semibold text-sm md:text-base">{name}</div>
+              <div className="text-xs md:text-sm text-muted-foreground">{company}</div>
             </div>
           </div>
 
@@ -779,14 +779,14 @@ export default function Home() {
           }}>
             
             {/* First Row - Left to Right */}
-            <Marquee className="mb-8 [--duration:30s] [--gap:1rem]" pauseOnHover repeat={6}>
+            <Marquee className="mb-8 [--duration:20s] [--gap:0.75rem]" pauseOnHover repeat={6}>
               {testimonials.slice(0, 3).map((testimonial, index) => (
                 <TestimonialCard key={`row1-${index}`} {...testimonial} />
               ))}
             </Marquee>
             
             {/* Second Row - Right to Left */}
-            <Marquee className="mb-8 [--duration:30s] [--gap:1rem]" reverse pauseOnHover repeat={6}>
+            <Marquee className="mb-8 [--duration:20s] [--gap:0.75rem]" reverse pauseOnHover repeat={6}>
               {testimonials.slice(3, 6).map((testimonial, index) => (
                 <TestimonialCard key={`row2-${index}`} {...testimonial} />
               ))}
