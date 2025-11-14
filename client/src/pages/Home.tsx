@@ -437,41 +437,133 @@ export default function Home() {
               </p>
             </motion.div>
 
-            {/* Projects Grid */}
-            <motion.div 
-              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-            >
-              <ProjectCard
-                title="Bella Cucina Restaurant"
-                description="Moderne Restaurant-Website mit Online-Reservierungssystem und interaktiver Speisekarte. Optimiert für mobile Geräte und schnelle Ladezeiten."
-                image="/project-bella-cucina.jpg"
-                category="Gastronomie"
-                technologies={["React", "TypeScript", "Tailwind CSS"]}
-                results="+100% Online-Reservierungen"
-              />
-              
-              <ProjectCard
-                title="Boutique Luna Shop"
-                description="E-Commerce-Plattform mit modernem Design, Warenkorb-Funktion und sicherer Zahlungsabwicklung. Vollständig responsive und SEO-optimiert."
-                image="/project-boutique-luna.jpg"
-                category="E-Commerce"
-                technologies={["Next.js", "Stripe", "Tailwind CSS"]}
-                results="+80% Umsatzsteigerung"
-              />
-              
-              <ProjectCard
-                title="FitStark Studio"
-                description="Fitness-Studio-Website mit Online-Buchungssystem für Kurse, Mitgliederverwaltung und Blog. Moderne Animationen und intuitive Navigation."
-                image="/project-fitstark.jpg"
-                category="Fitness"
-                technologies={["React", "WordPress", "CSS"]}
-                results="+120 neue Mitglieder"
-              />
-            </motion.div>
+            {/* Portfolio Images - Parallax Scroll Layout with 3 Different Text Styles */}
+            <div className="space-y-32 py-16">
+              {/* Travel Website - LAYOUT 1: Floating Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="relative group"
+              >
+                <motion.img 
+                  src="/portfolio-travel.jpg" 
+                  alt="Travel Booking Platform"
+                  className="w-full h-auto rounded-3xl shadow-2xl"
+                  whileHover={{ 
+                    scale: 1.02,
+                    rotate: -1,
+                    transition: { duration: 0.4 }
+                  }}
+                  style={{
+                    boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.25)'
+                  }}
+                />
+                {/* Floating Card - Bottom Left */}
+                <motion.div 
+                  className="absolute bottom-8 left-8 bg-card/95 backdrop-blur-xl border border-border rounded-2xl p-6 max-w-md shadow-2xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <div className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                    Travel & Booking
+                  </div>
+                  <h3 className="mb-2 text-2xl font-bold">Travel Booking Platform</h3>
+                  <p className="mb-4 text-sm text-muted-foreground">
+                    Moderne Reisebuchungs-Plattform mit interaktiver Karte, Hotel-Suche und Destinationen.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="rounded-md bg-muted px-2 py-1 text-xs font-medium">React</span>
+                    <span className="rounded-md bg-muted px-2 py-1 text-xs font-medium">TypeScript</span>
+                    <span className="rounded-md bg-muted px-2 py-1 text-xs font-medium">Maps API</span>
+                  </div>
+                </motion.div>
+              </motion.div>
+
+              {/* Furniture Website - LAYOUT 2: Split Design (Text Beside) */}
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="grid gap-8 md:grid-cols-2 items-center"
+              >
+                {/* Text Left */}
+                <motion.div
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="order-2 md:order-1"
+                >
+                  <div className="mb-3 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                    E-Commerce
+                  </div>
+                  <h3 className="mb-3 text-3xl font-bold">Furniture Design Museum</h3>
+                  <p className="mb-6 text-muted-foreground leading-relaxed">
+                    Elegante E-Commerce-Plattform für Designer-Möbel mit interaktiver Galerie, Virtual View und modernem Dark-Theme.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="rounded-md bg-muted px-3 py-1.5 text-sm font-medium">Next.js</span>
+                    <span className="rounded-md bg-muted px-3 py-1.5 text-sm font-medium">3D Models</span>
+                    <span className="rounded-md bg-muted px-3 py-1.5 text-sm font-medium">Shopify</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    <span className="font-semibold text-primary">+120%</span> Conversion Rate
+                  </div>
+                </motion.div>
+                {/* Image Right */}
+                <motion.img 
+                  src="/portfolio-furniture.jpg" 
+                  alt="Furniture Design Museum"
+                  className="w-full h-auto rounded-3xl shadow-2xl order-1 md:order-2"
+                  whileHover={{ 
+                    scale: 1.02,
+                    rotate: 1,
+                    transition: { duration: 0.4 }
+                  }}
+                  style={{
+                    boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.25)'
+                  }}
+                />
+              </motion.div>
+
+              {/* Football Website - LAYOUT 3: Hover Overlay */}
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="relative group mr-auto max-w-5xl overflow-hidden rounded-3xl"
+              >
+                <motion.img 
+                  src="/portfolio-football.jpg" 
+                  alt="Football Club Platform"
+                  className="w-full h-auto shadow-2xl transition-all duration-500 group-hover:scale-105"
+                  style={{
+                    boxShadow: '0 25px 50px -12px rgba(59, 130, 246, 0.25)'
+                  }}
+                />
+                {/* Overlay - Appears on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                  <div>
+                    <div className="mb-2 inline-block rounded-full bg-primary/20 backdrop-blur-sm px-3 py-1 text-xs font-medium text-white">
+                      Sports & Analytics
+                    </div>
+                    <h3 className="mb-2 text-3xl font-bold text-white">Football Club Platform</h3>
+                    <p className="mb-4 text-white/90 max-w-xl">
+                      Interaktive Fußball-Plattform mit Live-Statistiken, Team-Management und Spieler-Profilen. Neon-Green Design für maximale Energie.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="rounded-md bg-white/10 backdrop-blur-sm px-3 py-1.5 text-sm font-medium text-white">React</span>
+                      <span className="rounded-md bg-white/10 backdrop-blur-sm px-3 py-1.5 text-sm font-medium text-white">Live Data</span>
+                      <span className="rounded-md bg-white/10 backdrop-blur-sm px-3 py-1.5 text-sm font-medium text-white">Analytics</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
 
             {/* CTA Button */}
             <motion.div 

@@ -376,3 +376,23 @@
 - [x] Reduce testimonial card height on mobile (smaller text, compact layout)
 - [x] Speed up auto-scroll timing (shorter intervals)
 - [x] Add swipe gesture support for manual navigation
+
+## Portfolio Images Redesign - Freie Bilder ohne Safari/Cards
+- [ ] Neue user-provided Portfolio-Bilder kopieren (3 Bilder: Travel, Furniture, Football)
+- [ ] Alte AI-generierte Portfolio-Bilder entfernen
+- [ ] Safari browser mockup komplett entfernen
+- [ ] Card-Container entfernen - Bilder frei und groß zeigen
+- [ ] Portfolio-Section neu designen ohne Einschränkungen
+
+## Portfolio Parallax Scroll Effects
+- [x] Implement parallax scroll with different speeds (0.5x, 1x, 1.5x)
+- [x] Add rotation effects during scroll (hover: -1°, +1°)
+- [x] Vary image sizes for visual interest (full width, max-w-5xl offset)
+- [x] Test smooth transitions and performance
+
+## Portfolio Project Information - 3 Layout Variants
+- [x] Travel: Floating Card layout (card over image, bottom-left)
+- [x] Furniture: Split Design layout (text beside image)
+- [x] Football: Hover Overlay layout (text appears on hover)
+- [x] Add project titles, categories, descriptions, tech stacks
+- [x] Test all 3 layouts for user comparison
