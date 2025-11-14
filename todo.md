@@ -396,3 +396,19 @@
 - [x] Football: Hover Overlay layout (text appears on hover)
 - [x] Add project titles, categories, descriptions, tech stacks
 - [x] Test all 3 layouts for user comparison
+
+## Portfolio Layout 4 - Creative Diagonal/3D Design
+- [x] Create 4th layout with diagonal/tilted image (3D perspective)
+- [x] Minimal text sidebar - doesn't distract from image
+- [x] Image dominates 70-80% of space (70% image, 30% sidebar)
+- [x] Add subtle 3D transforms and shadows (rotateY -3deg, floating orbs)
+- [x] Test and compare with other 3 layouts
+
+## Hybrid Portfolio Layout (Best of Both)
+- [x] Remove floating orbs from Layout 4 (user request)
+- [x] Add tech stack icons to Layout 4 (React, TypeScript, Maps, Next.js, Shopify, etc.)
+- [x] Create reusable PortfolioProject component
+- [x] Apply Layout 4 (3D Diagonal) for desktop view
+- [x] Apply Layout 2 (Split Design) for mobile view (responsive grid)
+- [x] Apply hybrid layout to all 3 projects (Travel, Furniture, Football)
+- [x] Add proper project data (titles, descriptions, tech stacks, metrics)
