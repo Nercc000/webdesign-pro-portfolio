@@ -52,7 +52,7 @@ export function PortfolioProject({
           <img
             src={image}
             alt={title}
-            className="w-full h-auto rounded-3xl shadow-2xl"
+            className="w-full h-auto max-h-[250px] md:max-h-none object-cover rounded-3xl shadow-2xl"
             style={{
               boxShadow:
                 "0 30px 60px -15px rgba(59, 130, 246, 0.4), 0 10px 30px -10px rgba(0, 0, 0, 0.3)",
@@ -66,43 +66,43 @@ export function PortfolioProject({
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ delay: delay + 0.2 }}
-        className="space-y-6"
+        className="space-y-3 md:space-y-6"
       >
         {/* Vertical Number */}
-        <div className="text-8xl font-black text-primary/10 leading-none">
+        <div className="text-5xl md:text-8xl font-black text-primary/10 leading-none">
           {number}
         </div>
 
         {/* Category */}
-        <div className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+        <div className="inline-block rounded-full bg-primary/10 px-2 md:px-3 py-0.5 md:py-1 text-[10px] md:text-xs font-medium text-primary">
           {category}
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-bold leading-tight">{title}</h3>
+        <h3 className="text-lg md:text-2xl font-bold leading-tight">{title}</h3>
 
         {/* Description */}
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
           {description}
         </p>
 
         {/* Tech stack - With Icons */}
-        <div className="space-y-2">
+        <div className="space-y-1.5 md:space-y-2">
           {techStack.map((tech, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 rounded-full bg-muted px-4 py-2"
+              className="flex items-center gap-1.5 md:gap-2 rounded-full bg-muted px-2.5 md:px-4 py-1 md:py-2"
             >
-              <div className="w-4 h-4 flex-shrink-0">{tech.icon}</div>
-              <span className="text-xs font-medium">{tech.name}</span>
+              <div className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0">{tech.icon}</div>
+              <span className="text-[10px] md:text-xs font-medium">{tech.name}</span>
             </div>
           ))}
         </div>
 
         {/* Metric */}
-        <div className="pt-4 border-t border-border">
-          <div className="text-3xl font-bold text-primary">{metric.value}</div>
-          <div className="text-xs text-muted-foreground">{metric.label}</div>
+        <div className="pt-2 md:pt-4 border-t border-border">
+          <div className="text-2xl md:text-3xl font-bold text-primary">{metric.value}</div>
+          <div className="text-[10px] md:text-xs text-muted-foreground">{metric.label}</div>
         </div>
       </motion.div>
     </motion.div>

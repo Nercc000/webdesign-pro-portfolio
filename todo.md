@@ -412,3 +412,10 @@
 - [x] Apply Layout 2 (Split Design) for mobile view (responsive grid)
 - [x] Apply hybrid layout to all 3 projects (Travel, Furniture, Football)
 - [x] Add proper project data (titles, descriptions, tech stacks, metrics)
+
+## Mobile Portfolio Optimization
+- [x] Reduce image height on mobile (max-h-[250px] with object-cover)
+- [x] Make number smaller on mobile (text-5xl instead of text-8xl)
+- [x] Reduce spacing between elements on mobile (space-y-3 instead of space-y-6)
+- [x] Make tech stack pills smaller/more compact on mobile (smaller padding, text-[10px])
+- [x] Ensure entire project visible on one mobile screen
