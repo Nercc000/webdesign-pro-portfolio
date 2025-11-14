@@ -419,3 +419,7 @@
 - [x] Reduce spacing between elements on mobile (space-y-3 instead of space-y-6)
 - [x] Make tech stack pills smaller/more compact on mobile (smaller padding, text-[10px])
 - [x] Ensure entire project visible on one mobile screen
+
+## Remove Zeitgemäße Ästhetik Card
+- [x] Find and remove "Zeitgemäße Ästhetik" card from Warum ich section
+- [ ] Push all changes to GitHub

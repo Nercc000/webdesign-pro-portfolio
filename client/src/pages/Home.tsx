@@ -768,15 +768,6 @@ export default function Home() {
               href="#about"
               cta="Über mich"
             />
-
-            <BentoCard
-              name="Zeitgemäße Ästhetik"
-              className="col-span-1"
-              background={<ColorPalette />}
-              Icon={Star}
-              href="#services"
-              cta="Services ansehen"
-            />
           </BentoGrid>
         </div>
         </section>
