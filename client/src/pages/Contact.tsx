@@ -196,21 +196,85 @@ export default function Contact() {
                   </Button>
                 </form>
 
-                {/* Detailed Form CTA */}
-                <div className="mt-8 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6">
-                  <h3 className="mb-2 text-lg font-semibold">Detaillierte Projektanfrage</h3>
-                  <p className="mb-4 text-sm text-muted-foreground">
-                    Für konkrete Projekte empfehlen wir unseren strukturierten Fragebogen
-                  </p>
-                  <Button
-                    onClick={() => setShowDetailedForm(true)}
-                    variant="outline"
-                    className="w-full border-primary/50 hover:bg-primary/10"
-                  >
-                    Projektanfrage starten
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
+                {/* Detailed Form CTA - Spectacular Design */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="group relative mt-12 overflow-hidden rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-background p-8"
+                >
+                  {/* Animated Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  
+                  {/* Floating Particles Effect */}
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="absolute -left-4 top-1/4 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
+                    <div className="absolute -right-4 bottom-1/4 h-32 w-32 rounded-full bg-primary/10 blur-2xl" />
+                  </div>
+
+                  <div className="relative z-10">
+                    <div className="mb-6 flex items-center gap-3">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary/70 shadow-lg shadow-primary/25">
+                        <ArrowRight className="h-7 w-7 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold">Detaillierte Projektanfrage</h3>
+                        <p className="text-sm text-muted-foreground">
+                          Strukturierter Prozess für maßgeschneiderte Angebote
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mb-6 grid gap-4 sm:grid-cols-3">
+                      {[
+                        {
+                          icon: Check,
+                          title: "5 Schritte",
+                          desc: "Einfacher Fragebogen",
+                        },
+                        {
+                          icon: Check,
+                          title: "Präzises Angebot",
+                          desc: "Basierend auf Ihren Anforderungen",
+                        },
+                        {
+                          icon: Check,
+                          title: "24h Rückmeldung",
+                          desc: "Schnelle Bearbeitung garantiert",
+                        },
+                      ].map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.5 + i * 0.1, duration: 0.4 }}
+                          className="flex items-start gap-3"
+                        >
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/20">
+                            <item.icon className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <div className="font-semibold text-sm">{item.title}</div>
+                            <div className="text-xs text-muted-foreground">{item.desc}</div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <Button
+                      onClick={() => setShowDetailedForm(true)}
+                      size="lg"
+                      className="group/btn relative w-full overflow-hidden bg-gradient-to-r from-primary to-primary/80 text-lg font-semibold shadow-xl shadow-primary/25 transition-all hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/30"
+                    >
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        Jetzt Projektanfrage starten
+                        <ArrowRight className="h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                      </span>
+                      {/* Shimmer Effect */}
+                      <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                    </Button>
+                  </div>
+                </motion.div>
               </motion.div>
 
               {/* Right: Contact Info & Map */}
