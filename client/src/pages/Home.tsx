@@ -349,9 +349,6 @@ export default function Home() {
                     <ArrowRight className="ml-3 h-6 w-6" />
                   </a>
                 </Button>
-                <span className="text-sm font-medium text-primary/80 animate-fade-in">
-                  🔥 Nur noch 3 Plätze frei diese Woche
-                </span>
               </motion.div>
               <motion.div variants={scaleIn}>
                 <Button 
@@ -368,28 +365,7 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Trust Indicator */}
-            <motion.div 
-              className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground"
-              initial="hidden"
-              animate="visible"
-              variants={staggerContainer}
-              transition={{ delay: 0.6 }}
-              style={{ willChange: 'opacity, transform' }}
-            >
-              <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <span>Keine Vorkasse</span>
-              </motion.div>
-              <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <span>Fertig in 2 Wochen</span>
-              </motion.div>
-              <motion.div className="flex items-center gap-2" variants={fadeInUp}>
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <span>Zufriedenheitsgarantie</span>
-              </motion.div>
-            </motion.div>
+
           </div>
         </div>
 

@@ -51,3 +51,8 @@
 - Responsive design
 - Framer Motion animations
 - All creative components (BentoCard, GlassCard, StatCard, etc.)
+
+## User Requested Changes
+
+- [x] Remove "Nur noch 3 Plätze frei diese Woche" text (line 352-354) - too crowded
+- [x] Remove trust indicators section (lines 372-390+) - delete entire div
