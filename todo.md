@@ -56,3 +56,5 @@
 
 - [x] Remove "Nur noch 3 Plätze frei diese Woche" text (line 352-354) - too crowded
 - [x] Remove trust indicators section (lines 372-390+) - delete entire div
+
+- [x] Remove scroll indicator from homepage

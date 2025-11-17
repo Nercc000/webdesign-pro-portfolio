@@ -369,9 +369,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <ScrollIndicator />
-
         {/* Decorative Elements */}
         <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
