@@ -408,8 +408,8 @@ export default function Contact() {
       {/* Contact Options */}
       <section className="py-24 md:py-32">
         <div className="container">
-          <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-2 mb-16">
+          <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[1fr_auto_1fr] items-start">
             {/* Standard Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -532,24 +532,17 @@ export default function Contact() {
                 </CardContent>
               </Card>
             </motion.div>
-          </div>
 
-          {/* Contact Info - Below Both Forms */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="mx-auto max-w-4xl"
-          >
-            <Card className="border-2">
-              <CardHeader>
-                <CardTitle className="text-2xl">Weitere Kontaktmöglichkeiten</CardTitle>
-                <CardDescription className="text-base">
-                  Sie können uns auch direkt erreichen
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid gap-6 sm:grid-cols-3">
+            {/* Contact Info - Vertical Between Forms */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.25, duration: 0.5 }}
+              className="hidden lg:flex flex-col justify-center gap-6 px-4"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-primary/10 to-primary/5 blur-xl" />
+                <div className="relative space-y-6">
                   {[
                     { icon: Mail, title: "E-Mail", value: "kontakt@webdesignpro.de", href: "mailto:kontakt@webdesignpro.de" },
                     { icon: Phone, title: "Telefon", value: "+49 123 456789", href: "tel:+49123456789" },
@@ -558,23 +551,23 @@ export default function Contact() {
                     <a
                       key={i}
                       href={item.href}
-                      className="group flex items-start gap-3 rounded-xl border-2 border-transparent p-4 transition-all hover:border-primary/50 hover:bg-primary/5"
+                      className="group flex flex-col items-center gap-3 rounded-2xl border-2 border-border bg-card/50 backdrop-blur-sm p-6 transition-all hover:border-primary/50 hover:bg-primary/5 hover:scale-105"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 transition-colors group-hover:bg-primary/20">
-                        <item.icon className="h-5 w-5 text-primary" />
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 transition-all group-hover:bg-primary/20 group-hover:scale-110">
+                        <item.icon className="h-6 w-6 text-primary" />
                       </div>
-                      <div>
-                        <div className="font-medium">{item.title}</div>
-                        <div className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+                      <div className="text-center">
+                        <div className="font-semibold text-sm mb-1">{item.title}</div>
+                        <div className="text-xs text-muted-foreground group-hover:text-primary transition-colors">
                           {item.value}
                         </div>
                       </div>
                     </a>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+              </div>
+            </motion.div>
+          </div>
           </div>
         </div>
       </section>
