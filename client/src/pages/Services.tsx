@@ -12,6 +12,7 @@ import {
   Clock,
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import FAQ from "@/components/FAQ";
 
 const mainServices = [
   {
@@ -307,6 +308,9 @@ export default function Services() {
         </div>
       </section>
       </div>
+
+      {/* FAQ Section */}
+      <FAQ />
     </Layout>
   );
 }

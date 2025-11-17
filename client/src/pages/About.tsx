@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import FAQ from "@/components/FAQ";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import StackIcon from "tech-stack-icons";
 
@@ -315,6 +316,9 @@ export default function About() {
         </div>
       </section>
       </div>
+
+      {/* FAQ Section */}
+      <FAQ />
     </Layout>
   );
 }

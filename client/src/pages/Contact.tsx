@@ -29,6 +29,8 @@ import {
   Zap
 } from "lucide-react";
 import { toast } from "sonner";
+import Layout from "@/components/Layout";
+import FAQ from "@/components/FAQ";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -368,7 +370,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <Layout>
       {/* Background Pattern */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
@@ -655,6 +657,9 @@ export default function Contact() {
         </DialogContent>
       </Dialog>
 
+      {/* FAQ Section */}
+      <FAQ />
+
       <style>{`
         @keyframes shimmer {
           to {
@@ -662,6 +667,6 @@ export default function Contact() {
           }
         }
       `}</style>
-    </div>
+    </Layout>
   );
 }

@@ -89,3 +89,15 @@
 - [x] Add better animations and transitions
 - [x] Improve visual hierarchy and spacing
 - [x] Add premium UI components from collections (shimmer effect, border beam, animated grid)
+
+## Header, Footer & FAQ Components
+
+- [x] Add header/navigation to Contact page
+- [x] Create reusable Footer component (already in Layout)
+- [x] Add Footer to all pages (included in Layout component)
+- [x] Create FAQ panel component
+- [x] Add FAQ to Contact page
+
+- [x] Add FAQ to Services page
+- [x] Add FAQ to About page
+- [x] Add FAQ to Home page (already has FAQ)
