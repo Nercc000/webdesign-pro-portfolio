@@ -65,7 +65,10 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background pt-32 pb-12">
+      <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-background/50 pt-32 pb-12">
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -237,64 +240,76 @@ export default function Contact() {
                   Oder senden Sie mir eine kurze Nachricht
                 </span>
               </div>
-              <form onSubmit={handleSubmit} className="rounded-lg border-2 border-border bg-card p-8 space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-xs font-medium uppercase tracking-widest text-primary">
-                    Name *
-                  </Label>
+              <form onSubmit={handleSubmit} className="relative rounded-xl border border-primary/20 bg-card/50 backdrop-blur-sm p-8 space-y-8 shadow-lg">
+                {/* Decorative corner accent */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
+                
+                <div className="space-y-3 relative">
+                  <div className="flex items-center gap-2">
+                    <div className="h-1 w-1 rounded-full bg-primary" />
+                    <Label htmlFor="name" className="text-sm font-semibold text-foreground">
+                      Ihr Name
+                    </Label>
+                  </div>
                   <Input
                     id="name"
-                    placeholder="Ihr Name"
+                    placeholder="Max Mustermann"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="border-border bg-background font-mono"
+                    className="border-0 border-b-2 border-border bg-transparent px-0 rounded-none focus-visible:border-primary transition-colors"
                     required
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-xs font-medium uppercase tracking-widest text-primary">
-                    E-Mail *
-                  </Label>
+                <div className="space-y-3 relative">
+                  <div className="flex items-center gap-2">
+                    <div className="h-1 w-1 rounded-full bg-primary" />
+                    <Label htmlFor="email" className="text-sm font-semibold text-foreground">
+                      E-Mail Adresse
+                    </Label>
+                  </div>
                   <Input
                     id="email"
                     type="email"
-                    placeholder="ihre@email.de"
+                    placeholder="max@beispiel.de"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="border-border bg-background font-mono"
+                    className="border-0 border-b-2 border-border bg-transparent px-0 rounded-none focus-visible:border-primary transition-colors"
                     required
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-xs font-medium uppercase tracking-widest text-primary">
-                    Nachricht *
-                  </Label>
+                <div className="space-y-3 relative">
+                  <div className="flex items-center gap-2">
+                    <div className="h-1 w-1 rounded-full bg-primary" />
+                    <Label htmlFor="message" className="text-sm font-semibold text-foreground">
+                      Ihre Nachricht
+                    </Label>
+                  </div>
                   <Textarea
                     id="message"
-                    placeholder="Ihre Nachricht..."
+                    placeholder="Erzählen Sie uns von Ihrem Projekt..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[150px] resize-none border-border bg-background font-mono"
+                    className="min-h-[150px] resize-none border-2 border-border bg-transparent rounded-lg focus-visible:border-primary transition-colors"
                     required
                   />
                 </div>
 
-                <div className="flex items-start gap-2">
-                  <input type="checkbox" id="privacy" className="mt-1" required />
-                  <label htmlFor="privacy" className="text-sm text-muted-foreground">
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
+                  <input type="checkbox" id="privacy" className="mt-1 accent-primary" required />
+                  <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
                     Ich habe die{" "}
-                    <a href="/privacy" className="text-primary hover:underline">
+                    <a href="/privacy" className="text-primary hover:underline font-medium">
                       Datenschutzerklärung
                     </a>{" "}
-                    gelesen und akzeptiere sie *
+                    gelesen und stimme der Verarbeitung meiner Daten zu.
                   </label>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
+                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all">
                   <Send className="mr-2 h-4 w-4" />
-                  Senden
+                  Nachricht absenden
                 </Button>
               </form>
             </motion.div>
