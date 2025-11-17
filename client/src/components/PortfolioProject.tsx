@@ -52,11 +52,7 @@ export function PortfolioProject({
           <img
             src={image}
             alt={title}
-            className="w-full h-auto max-h-[250px] md:max-h-none object-cover rounded-3xl shadow-2xl"
-            style={{
-              boxShadow:
-                "0 30px 60px -15px rgba(59, 130, 246, 0.4), 0 10px 30px -10px rgba(0, 0, 0, 0.3)",
-            }}
+            className="w-full h-auto max-h-[250px] md:max-h-none object-cover shadow-2xl"
           />
         </motion.div>
       </div>

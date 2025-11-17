@@ -58,3 +58,6 @@
 - [x] Remove trust indicators section (lines 372-390+) - delete entire div
 
 - [x] Remove scroll indicator from homepage
+
+- [x] Remove glow effect from featured portfolio images
+- [x] Remove rounded corners from featured portfolio images
