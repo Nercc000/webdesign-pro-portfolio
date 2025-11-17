@@ -104,4 +104,6 @@
 
 ## Contact Page Layout Adjustment
 
-- [x] Move contact info (email, phone, location) vertically between standard and detailed form
+- [x] Move contact info (email, phone, location) vertically between standard and detailed form (corrected: below both forms)
+
+- [x] Fix contact info layout - keep forms side-by-side, put contact info below both forms

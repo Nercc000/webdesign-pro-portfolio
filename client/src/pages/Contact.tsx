@@ -408,8 +408,8 @@ export default function Contact() {
       {/* Contact Options */}
       <section className="py-24 md:py-32">
         <div className="container">
-          <div className="mx-auto max-w-6xl space-y-8">
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="mx-auto max-w-6xl">
+          <div className="grid gap-8 lg:grid-cols-2 mb-16">
             {/* Standard Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -534,11 +534,12 @@ export default function Contact() {
             </motion.div>
           </div>
 
-          {/* Contact Info - Between Forms */}
+          {/* Contact Info - Below Both Forms */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
+            className="mx-auto max-w-4xl"
           >
             <Card className="border-2">
               <CardHeader>
