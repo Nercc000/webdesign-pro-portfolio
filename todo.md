@@ -151,3 +151,8 @@
 - [x] Monospace font for technical elements (email, labels)
 - [x] Subtle borders, not glowing - professional and clean
 - [x] Keep our existing theme (not pure black background)
+
+## Contact Page Updates
+
+- [x] Change "Other Ways" section from 2 cards to 3 cards (Calendly, WhatsApp, Detaillierte Projektanfrage)
+- [x] Remove the separate "Detailed Form CTA" section below since it's now in the cards

@@ -190,7 +190,7 @@ export default function Contact() {
                   Weitere Möglichkeiten
                 </span>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <a
                   href="#calendly"
                   className="group rounded-lg border-2 border-primary/20 bg-card p-6 transition-all hover:border-primary/50 hover:bg-card/80"
@@ -213,6 +213,16 @@ export default function Contact() {
                   <h3 className="mb-1 font-semibold">WhatsApp</h3>
                   <p className="text-sm font-mono text-muted-foreground">Direkte Nachricht</p>
                 </a>
+                <button
+                  onClick={() => setShowDetailedForm(true)}
+                  className="group rounded-lg border-2 border-primary/20 bg-card p-6 text-left transition-all hover:border-primary/50 hover:bg-card/80"
+                >
+                  <div className="mb-3 text-primary">
+                    <Send className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-1 font-semibold">Detaillierte Anfrage</h3>
+                  <p className="text-sm font-mono text-muted-foreground">5-Schritte Formular</p>
+                </button>
               </div>
             </motion.div>
 
@@ -289,24 +299,7 @@ export default function Contact() {
               </form>
             </motion.div>
 
-            {/* Detailed Form CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-center"
-            >
-              <p className="mb-4 text-muted-foreground">
-                Für detaillierte Projektanfragen nutzen Sie unseren strukturierten Fragebogen
-              </p>
-              <Button
-                onClick={() => setShowDetailedForm(true)}
-                variant="outline"
-                size="lg"
-              >
-                Detaillierte Projektanfrage starten
-              </Button>
-            </motion.div>
+
           </div>
         </div>
       </section>
