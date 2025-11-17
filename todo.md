@@ -101,3 +101,7 @@
 - [x] Add FAQ to Services page
 - [x] Add FAQ to About page
 - [x] Add FAQ to Home page (already has FAQ)
+
+## Contact Page Layout Adjustment
+
+- [x] Move contact info (email, phone, location) vertically between standard and detailed form
