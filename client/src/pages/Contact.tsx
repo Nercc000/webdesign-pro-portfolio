@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Phone, MapPin, ArrowRight, Check } from "lucide-react";
+import { Send, Mail, Phone, MapPin, Calendar, MessageCircle, Copy, Check } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,10 +19,10 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
 
+  const [emailCopied, setEmailCopied] = useState(false);
   const [showDetailedForm, setShowDetailedForm] = useState(false);
   const [detailedStep, setDetailedStep] = useState(1);
   const [detailedFormData, setDetailedFormData] = useState({
@@ -48,6 +48,12 @@ export default function Contact() {
     setDetailedStep(1);
   };
 
+  const copyEmail = () => {
+    navigator.clipboard.writeText("kontakt@webdesignpro.de");
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
   const nextStep = () => {
     if (detailedStep < 5) setDetailedStep(detailedStep + 1);
   };
@@ -59,52 +65,171 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background pt-32 pb-20">
+      <section className="relative overflow-hidden bg-background pt-32 pb-12">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mx-auto max-w-3xl text-center"
+            className="mx-auto max-w-5xl text-center"
           >
-            <h1 className="mb-6 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-              Lassen Sie uns{" "}
-              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                sprechen
+            {/* Eyebrow */}
+            <div className="mb-8 flex items-center justify-center gap-4">
+              <div className="h-px w-16 bg-border" />
+              <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                Let's Talk
               </span>
+              <div className="h-px w-16 bg-border" />
+            </div>
+
+            {/* Massive Headline */}
+            <h1 className="mb-6 font-serif text-7xl font-bold tracking-tight sm:text-8xl md:text-9xl">
+              KONTAKT
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Bereit für Ihr nächstes Projekt? Kontaktieren Sie uns für ein kostenloses Erstgespräch.
+
+            {/* Subheadline with social proof */}
+            <p className="text-lg text-muted-foreground sm:text-xl">
+              Über 50+ zufriedene Kunden. Antwort innerhalb von 24 Stunden garantiert.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Main Contact Section */}
-      <section className="py-20">
+      {/* Feature Cards */}
+      <section className="py-12">
         <div className="container">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Left: Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="mb-8">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
-                    1
-                  </div>
-                  <h2 className="text-2xl font-bold">Ihre Nachricht</h2>
-                </div>
-                <p className="text-muted-foreground">
-                  Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.
-                </p>
-              </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {[
+              {
+                icon: <Send className="h-5 w-5" />,
+                title: "Schnelle Lieferung",
+                description: "4-6 Wochen",
+              },
+              {
+                icon: <Check className="h-5 w-5" />,
+                title: "100% Garantie",
+                description: "Geld zurück",
+              },
+              {
+                icon: <Phone className="h-5 w-5" />,
+                title: "24/7 Support",
+                description: "Immer erreichbar",
+              },
+              {
+                icon: <MapPin className="h-5 w-5" />,
+                title: "Performance",
+                description: "Optimiert",
+              },
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                className="rounded-lg border bg-card p-6 transition-colors hover:border-primary/50"
+              >
+                <div className="mb-3 text-primary">{feature.icon}</div>
+                <h3 className="mb-1 font-semibold">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground font-mono">{feature.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Main Contact Section */}
+      <section className="py-12">
+        <div className="container">
+          <div className="mx-auto max-w-3xl space-y-12">
+            {/* Direct Email */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="mb-4">
+                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                  Direkte E-Mail
+                </span>
+              </div>
+              <button
+                onClick={copyEmail}
+                className="group relative w-full rounded-lg border-2 border-primary/20 bg-card p-6 text-left transition-all hover:border-primary/50 hover:bg-card/80"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-2xl font-semibold">
+                    kontakt@webdesignpro.de
+                  </span>
+                  <div className="flex items-center gap-2">
+                    {emailCopied ? (
+                      <Check className="h-5 w-5 text-primary" />
+                    ) : (
+                      <Copy className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary" />
+                    )}
+                  </div>
+                </div>
+                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                  {emailCopied ? "Kopiert!" : "Klicken zum Kopieren"}
+                </div>
+              </button>
+            </motion.div>
+
+            {/* Other Ways */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <div className="mb-4">
+                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                  Weitere Möglichkeiten
+                </span>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <a
+                  href="#calendly"
+                  className="group rounded-lg border-2 border-primary/20 bg-card p-6 transition-all hover:border-primary/50 hover:bg-card/80"
+                >
+                  <div className="mb-3 text-primary">
+                    <Calendar className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-1 font-semibold">Calendly</h3>
+                  <p className="text-sm font-mono text-muted-foreground">30 Min. buchen</p>
+                </a>
+                <a
+                  href="https://wa.me/49123456789"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group rounded-lg border-2 border-primary/20 bg-card p-6 transition-all hover:border-primary/50 hover:bg-card/80"
+                >
+                  <div className="mb-3 text-primary">
+                    <MessageCircle className="h-6 w-6" />
+                  </div>
+                  <h3 className="mb-1 font-semibold">WhatsApp</h3>
+                  <p className="text-sm font-mono text-muted-foreground">Direkte Nachricht</p>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Quick Message Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <div className="mb-4">
+                <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                  Oder senden Sie mir eine kurze Nachricht
+                </span>
+              </div>
+              <form onSubmit={handleSubmit} className="rounded-lg border-2 border-border bg-card p-8 space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-sm font-medium">
+                  <Label htmlFor="name" className="text-xs font-medium uppercase tracking-widest text-primary">
                     Name *
                   </Label>
                   <Input
@@ -112,13 +237,13 @@ export default function Contact() {
                     placeholder="Ihr Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="border-b-2 border-l-0 border-r-0 border-t-0 border-border bg-transparent px-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                    className="border-border bg-background font-mono"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-medium">
+                  <Label htmlFor="email" className="text-xs font-medium uppercase tracking-widest text-primary">
                     E-Mail *
                   </Label>
                   <Input
@@ -127,145 +252,60 @@ export default function Contact() {
                     placeholder="ihre@email.de"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="border-b-2 border-l-0 border-r-0 border-t-0 border-border bg-transparent px-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                    className="border-border bg-background font-mono"
                     required
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-sm font-medium">
-                    Telefon
-                  </Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="+49 123 456789"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="border-b-2 border-l-0 border-r-0 border-t-0 border-border bg-transparent px-0 focus-visible:ring-0 focus-visible:ring-offset-0"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-sm font-medium">
+                  <Label htmlFor="message" className="text-xs font-medium uppercase tracking-widest text-primary">
                     Nachricht *
                   </Label>
                   <Textarea
                     id="message"
-                    placeholder="Beschreiben Sie Ihr Projekt..."
+                    placeholder="Ihre Nachricht..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[150px] resize-none border-b-2 border-l-0 border-r-0 border-t-0 border-border bg-transparent px-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                    className="min-h-[150px] resize-none border-border bg-background font-mono"
                     required
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full sm:w-auto">
+                <div className="flex items-start gap-2">
+                  <input type="checkbox" id="privacy" className="mt-1" required />
+                  <label htmlFor="privacy" className="text-sm text-muted-foreground">
+                    Ich habe die{" "}
+                    <a href="/privacy" className="text-primary hover:underline">
+                      Datenschutzerklärung
+                    </a>{" "}
+                    gelesen und akzeptiere sie *
+                  </label>
+                </div>
+
+                <Button type="submit" size="lg" className="w-full">
                   <Send className="mr-2 h-4 w-4" />
-                  Nachricht senden
+                  Senden
                 </Button>
               </form>
-
-              {/* Detailed Form CTA */}
-              <div className="mt-12 border-t pt-8">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
-                    2
-                  </div>
-                  <h3 className="text-xl font-bold">Detaillierte Projektanfrage</h3>
-                </div>
-                <p className="mb-4 text-muted-foreground">
-                  Für konkrete Projekte empfehlen wir unseren strukturierten Fragebogen mit 5 Schritten.
-                </p>
-                <Button
-                  onClick={() => setShowDetailedForm(true)}
-                  variant="outline"
-                  className="group"
-                >
-                  Projektanfrage starten
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
             </motion.div>
 
-            {/* Right: Contact Info */}
+            {/* Detailed Form CTA */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="text-center"
             >
-              <div>
-                <h3 className="mb-6 text-2xl font-bold">Kontaktinformationen</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">E-Mail</div>
-                      <a
-                        href="mailto:kontakt@webdesignpro.de"
-                        className="text-muted-foreground hover:text-primary"
-                      >
-                        kontakt@webdesignpro.de
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <Phone className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Telefon</div>
-                      <a
-                        href="tel:+49123456789"
-                        className="text-muted-foreground hover:text-primary"
-                      >
-                        +49 123 456789
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Standort</div>
-                      <div className="text-muted-foreground">
-                        Berlin, Deutschland
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-lg border bg-card p-6">
-                <h4 className="mb-4 font-semibold">Öffnungszeiten</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Montag - Freitag</span>
-                    <span className="font-medium">9:00 - 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Samstag</span>
-                    <span className="font-medium">10:00 - 14:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Sonntag</span>
-                    <span className="font-medium">Geschlossen</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-lg border bg-card p-6">
-                <h4 className="mb-2 font-semibold">Schnelle Rückmeldung</h4>
-                <p className="text-sm text-muted-foreground">
-                  Wir antworten auf alle Anfragen innerhalb von 24 Stunden. Bei dringenden Anliegen rufen Sie uns bitte direkt an.
-                </p>
-              </div>
+              <p className="mb-4 text-muted-foreground">
+                Für detaillierte Projektanfragen nutzen Sie unseren strukturierten Fragebogen
+              </p>
+              <Button
+                onClick={() => setShowDetailedForm(true)}
+                variant="outline"
+                size="lg"
+              >
+                Detaillierte Projektanfrage starten
+              </Button>
             </motion.div>
           </div>
         </div>

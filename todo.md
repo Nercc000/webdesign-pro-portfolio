@@ -137,3 +137,17 @@
 - [x] Remove all unnecessary animations and effects - only subtle fade-ins
 - [x] Focus on typography hierarchy and whitespace - generous spacing throughout
 - [x] Make it truly professional and unique - inspired by Linear and top agencies
+
+
+## Contact Page Redesign - Ludovic Argenty Style (with our brand colors)
+
+- [x] Create massive serif headline "KONTAKT" as hero (similar to Ludovic but with our style)
+- [x] Add small eyebrow text "LET'S TALK" with lines
+- [x] Add 4-column feature/trust cards grid with subtle borders
+- [x] Create copyable email section with monospace font
+- [x] Add "Other Ways" section with Calendly/WhatsApp cards
+- [x] Single-column centered layout with generous whitespace
+- [x] Use our brand colors (primary blue) for accents instead of pure black/white
+- [x] Monospace font for technical elements (email, labels)
+- [x] Subtle borders, not glowing - professional and clean
+- [x] Keep our existing theme (not pure black background)
