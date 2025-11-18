@@ -206,3 +206,11 @@
 - [x] Keep blue brand color only for CTAs, buttons, and important links
 - [x] Review Contact page icons and update colors - changed feature cards and other ways icons to text-foreground
 - [x] Review all other pages and update icon colors - updated Home, Services, Portfolio, About pages
+
+## Card Redesign & Blue Color Removal
+
+- [x] Change card borders from border-primary to border (neutral gray)
+- [x] Redesign cards: icon centered at top, stronger background (rounded-xl, bg-card/80, backdrop-blur)
+- [x] Remove blue from form dot indicators (changed to bg-foreground/40)
+- [x] Remove blue from form input focus borders (focus-visible:border-foreground)
+- [x] Make card backgrounds more prominent/kraftvoll (added backdrop-blur, shadow-xl, hover:-translate-y-1)

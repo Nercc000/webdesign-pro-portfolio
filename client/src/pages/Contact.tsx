@@ -133,11 +133,11 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="rounded-lg border bg-card p-6 transition-colors hover:border-primary/50"
+                className="rounded-xl border-2 bg-card/80 backdrop-blur p-8 transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="mb-3 text-foreground">{feature.icon}</div>
-                <h3 className="mb-1 font-semibold">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground font-mono">{feature.description}</p>
+                <div className="mb-4 flex justify-center text-foreground">{feature.icon}</div>
+                <h3 className="mb-2 text-center font-bold">{feature.title}</h3>
+                <p className="text-center text-sm text-muted-foreground font-mono">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -161,21 +161,19 @@ export default function Contact() {
               </div>
               <button
                 onClick={copyEmail}
-                className="group relative w-full rounded-lg border-2 border-primary/20 bg-card p-6 text-left transition-all hover:border-primary/50 hover:bg-card/80"
+                className="group relative w-full rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 text-center transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-2xl font-semibold">
-                    kontakt@webdesignpro.de
-                  </span>
-                  <div className="flex items-center gap-2">
-                    {emailCopied ? (
-                      <Check className="h-5 w-5 text-primary" />
-                    ) : (
-                      <Copy className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-foreground" />
-                    )}
-                  </div>
+                <div className="mb-4 flex justify-center">
+                  {emailCopied ? (
+                    <Check className="h-8 w-8 text-primary" />
+                  ) : (
+                    <Mail className="h-8 w-8 text-foreground transition-colors" />
+                  )}
                 </div>
-                <div className="mt-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                <span className="block font-mono text-xl font-bold mb-2">
+                  kontakt@webdesignpro.de
+                </span>
+                <div className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
                   {emailCopied ? "Kopiert!" : "Klicken zum Kopieren"}
                 </div>
               </button>
@@ -195,34 +193,34 @@ export default function Contact() {
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <a
                   href="#calendly"
-                  className="group rounded-lg border-2 border-primary/20 bg-card p-6 transition-all hover:border-primary/50 hover:bg-card/80"
+                  className="group rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
                 >
-                  <div className="mb-3 text-foreground">
-                    <Calendar className="h-6 w-6" />
+                  <div className="mb-4 flex justify-center text-foreground">
+                    <Calendar className="h-8 w-8" />
                   </div>
-                  <h3 className="mb-1 font-semibold">Calendly</h3>
-                  <p className="text-sm font-mono text-muted-foreground">30 Min. buchen</p>
+                  <h3 className="mb-2 text-center font-bold">Calendly</h3>
+                  <p className="text-center text-sm font-mono text-muted-foreground">30 Min. buchen</p>
                 </a>
                 <a
                   href="https://wa.me/49123456789"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-lg border-2 border-primary/20 bg-card p-6 transition-all hover:border-primary/50 hover:bg-card/80"
+                  className="group rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
                 >
-                  <div className="mb-3 text-foreground">
-                    <MessageCircle className="h-6 w-6" />
+                  <div className="mb-4 flex justify-center text-foreground">
+                    <MessageCircle className="h-8 w-8" />
                   </div>
-                  <h3 className="mb-1 font-semibold">WhatsApp</h3>
-                  <p className="text-sm font-mono text-muted-foreground">Direkte Nachricht</p>
+                  <h3 className="mb-2 text-center font-bold">WhatsApp</h3>
+                  <p className="text-center text-sm font-mono text-muted-foreground">Direkte Nachricht</p>
                 </a>
                 <button
                   onClick={() => setShowDetailedForm(true)}
-                  className="group rounded-lg border-2 border-primary/20 bg-card p-6 text-left transition-all hover:border-primary/50 hover:bg-card/80"
+                  className="group rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 text-center transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
                 >
-                  <div className="mb-3 text-foreground">
-                    <Send className="h-6 w-6" />
+                  <div className="mb-4 flex justify-center text-foreground">
+                    <Send className="h-8 w-8" />
                   </div>
-                  <h3 className="mb-1 font-semibold">Detaillierte Anfrage</h3>
+                  <h3 className="mb-2 font-bold">Detaillierte Anfrage</h3>
                   <p className="text-sm font-mono text-muted-foreground">5-Schritte Formular</p>
                 </button>
               </div>
@@ -239,13 +237,13 @@ export default function Contact() {
                   Oder senden Sie mir eine kurze Nachricht
                 </span>
               </div>
-              <form onSubmit={handleSubmit} className="relative rounded-xl border border-primary/20 bg-card/50 backdrop-blur-sm p-10 space-y-10 shadow-lg">
+              <form onSubmit={handleSubmit} className="relative rounded-xl border-2 border-border bg-card/80 backdrop-blur p-10 space-y-10 shadow-xl">
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
                 
                 <div className="space-y-4 relative">
                   <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
                     <Label htmlFor="name" className="text-lg font-semibold text-foreground tracking-tight">
                       Ihr Name
                     </Label>
@@ -255,14 +253,14 @@ export default function Contact() {
                     placeholder="Max Mustermann"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-primary transition-colors focus-visible:ring-0"
+                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-foreground transition-colors focus-visible:ring-0"
                     required
                   />
                 </div>
 
                 <div className="space-y-4 relative">
                   <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
                     <Label htmlFor="email" className="text-lg font-semibold text-foreground tracking-tight">
                       E-Mail Adresse
                     </Label>
@@ -273,14 +271,14 @@ export default function Contact() {
                     placeholder="max@beispiel.de"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-primary transition-colors focus-visible:ring-0"
+                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-foreground transition-colors focus-visible:ring-0"
                     required
                   />
                 </div>
 
                 <div className="space-y-4 relative">
                   <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <div className="h-1.5 w-1.5 rounded-full bg-foreground/40" />
                     <Label htmlFor="message" className="text-lg font-semibold text-foreground tracking-tight">
                       Ihre Nachricht
                     </Label>
@@ -290,7 +288,7 @@ export default function Contact() {
                     placeholder="Erzählen Sie uns von Ihrem Projekt..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[180px] resize-none border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-primary transition-colors focus-visible:ring-0"
+                    className="min-h-[180px] resize-none border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-foreground transition-colors focus-visible:ring-0"
                     required
                   />
                 </div>
