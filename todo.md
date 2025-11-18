@@ -232,3 +232,10 @@
 - [x] Make card icons much larger (h-12 w-12, feature icons scale-150)
 - [x] Add floating particle background animation (20 particles with Framer Motion)
 - [x] Fix submit button color with new blue palette (automatically uses new primary color)
+
+## Size Adjustments & Hover Fix
+
+- [x] Reduce hero text size (text-6xl to text-9xl, was text-[12rem])
+- [x] Reduce body text sizes slightly (text-lg to text-2xl, was text-3xl)
+- [x] Make particles smaller and more subtle (w-0.5 h-0.5, 30 particles, bg-foreground/20)
+- [x] Fix theme toggle hover to be fully transparent (bg-transparent hover:bg-transparent)

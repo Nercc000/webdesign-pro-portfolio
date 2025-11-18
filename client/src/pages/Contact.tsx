@@ -71,10 +71,10 @@ export default function Contact() {
         
         {/* Floating Particles */}
         <div className="absolute inset-0 -bottom-[150vh] overflow-hidden pointer-events-none">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(30)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-primary/30 rounded-full"
+              className="absolute w-0.5 h-0.5 bg-foreground/20 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -110,12 +110,12 @@ export default function Contact() {
             </div>
 
             {/* Massive Headline */}
-            <h1 className="mb-8 font-serif text-8xl font-bold tracking-tight sm:text-9xl md:text-[10rem] lg:text-[12rem]">
+            <h1 className="mb-8 font-serif text-6xl font-bold tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
               KONTAKT
             </h1>
 
             {/* Subheadline with social proof */}
-            <p className="text-xl text-muted-foreground sm:text-2xl md:text-3xl max-w-4xl mx-auto">
+            <p className="text-lg text-muted-foreground sm:text-xl md:text-2xl max-w-3xl mx-auto">
               Über 50+ zufriedene Kunden. Antwort innerhalb von 24 Stunden garantiert.
             </p>
           </motion.div>
@@ -160,9 +160,9 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 className="rounded-xl border-2 bg-card/80 backdrop-blur p-8 transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="mb-6 flex justify-center text-foreground scale-150">{feature.icon}</div>
-                <h3 className="mb-3 text-center text-xl font-bold">{feature.title}</h3>
-                <p className="text-center text-base text-muted-foreground font-mono">{feature.description}</p>
+                <div className="mb-6 flex justify-center text-foreground scale-125">{feature.icon}</div>
+                <h3 className="mb-3 text-center text-lg font-bold">{feature.title}</h3>
+                <p className="text-center text-sm text-muted-foreground font-mono">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -195,10 +195,10 @@ export default function Contact() {
                     <Mail className="h-12 w-12 text-foreground transition-colors" />
                   )}
                 </div>
-                <span className="block font-mono text-2xl font-bold mb-3">
+                <span className="block font-mono text-xl font-bold mb-3">
                   kontakt@webdesignpro.de
                 </span>
-                <div className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
+                <div className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
                   {emailCopied ? "Kopiert!" : "Klicken zum Kopieren"}
                 </div>
               </button>
@@ -223,8 +223,8 @@ export default function Contact() {
                   <div className="mb-6 flex justify-center text-foreground">
                     <Calendar className="h-12 w-12" />
                   </div>
-                  <h3 className="mb-3 text-center text-xl font-bold">Calendly</h3>
-                  <p className="text-center text-base font-mono text-muted-foreground">30 Min. buchen</p>
+                  <h3 className="mb-3 text-center text-lg font-bold">Calendly</h3>
+                  <p className="text-center text-sm font-mono text-muted-foreground">30 Min. buchen</p>
                 </a>
                 <a
                   href="https://wa.me/49123456789"
@@ -235,8 +235,8 @@ export default function Contact() {
                   <div className="mb-6 flex justify-center text-foreground">
                     <MessageCircle className="h-12 w-12" />
                   </div>
-                  <h3 className="mb-3 text-center text-xl font-bold">WhatsApp</h3>
-                  <p className="text-center text-base font-mono text-muted-foreground">Direkte Nachricht</p>
+                  <h3 className="mb-3 text-center text-lg font-bold">WhatsApp</h3>
+                  <p className="text-center text-sm font-mono text-muted-foreground">Direkte Nachricht</p>
                 </a>
                 <button
                   onClick={() => setShowDetailedForm(true)}
@@ -245,8 +245,8 @@ export default function Contact() {
                   <div className="mb-6 flex justify-center text-foreground">
                     <Send className="h-12 w-12" />
                   </div>
-                  <h3 className="mb-3 text-xl font-bold">Detaillierte Anfrage</h3>
-                  <p className="text-base font-mono text-muted-foreground">5-Schritte Formular</p>
+                  <h3 className="mb-3 text-lg font-bold">Detaillierte Anfrage</h3>
+                  <p className="text-sm font-mono text-muted-foreground">5-Schritte Formular</p>
                 </button>
               </div>
             </motion.div>
