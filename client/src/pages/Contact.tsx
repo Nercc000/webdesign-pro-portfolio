@@ -13,7 +13,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import FAQ from "@/components/FAQ";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -67,7 +67,7 @@ export default function Contact() {
       {/* Hero Section with Extended Grid */}
       <section className="relative overflow-visible pt-32 pb-12">
         {/* Animated Grid Background - Larger cells, subtle opacity */}
-        <div className="absolute inset-0 -bottom-[150vh] bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:100px_100px]" />
+        <div className="absolute inset-0 -bottom-[150vh] bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:100px_100px]" />
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -238,8 +238,6 @@ export default function Contact() {
                 </span>
               </div>
               <form onSubmit={handleSubmit} className="relative rounded-xl border-2 border-border bg-card/80 backdrop-blur p-10 space-y-10 shadow-xl">
-                {/* Decorative corner accent */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
                 
                 <div className="space-y-4 relative">
                   <div className="flex items-center gap-3">
@@ -253,7 +251,7 @@ export default function Contact() {
                     placeholder="Max Mustermann"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-foreground transition-colors focus-visible:ring-0"
+                    className="border-2 border-border bg-background/50 px-6 py-5 text-lg rounded-xl focus-visible:border-foreground focus-visible:bg-background/80 transition-all focus-visible:ring-0 font-medium"
                     required
                   />
                 </div>
@@ -271,7 +269,7 @@ export default function Contact() {
                     placeholder="max@beispiel.de"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-foreground transition-colors focus-visible:ring-0"
+                    className="border-2 border-border bg-background/50 px-6 py-5 text-lg rounded-xl focus-visible:border-foreground focus-visible:bg-background/80 transition-all focus-visible:ring-0 font-medium"
                     required
                   />
                 </div>
@@ -288,7 +286,7 @@ export default function Contact() {
                     placeholder="Erzählen Sie uns von Ihrem Projekt..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[180px] resize-none border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-foreground transition-colors focus-visible:ring-0"
+                    className="min-h-[180px] resize-none border-2 border-border bg-background/50 px-6 py-5 text-lg rounded-xl focus-visible:border-foreground focus-visible:bg-background/80 transition-all focus-visible:ring-0 font-medium"
                     required
                   />
                 </div>
@@ -534,8 +532,7 @@ export default function Contact() {
         </DialogContent>
       </Dialog>
 
-      {/* FAQ Section */}
-      <FAQ />
+
     </Layout>
   );
 }

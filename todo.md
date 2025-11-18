@@ -214,3 +214,12 @@
 - [x] Remove blue from form dot indicators (changed to bg-foreground/40)
 - [x] Remove blue from form input focus borders (focus-visible:border-foreground)
 - [x] Make card backgrounds more prominent/kraftvoll (added backdrop-blur, shadow-xl, hover:-translate-y-1)
+
+## Visual Edit Improvements
+
+- [x] Remove FAQ component from Contact page completely
+- [x] Delete decorative corner accent (blue gradient) from form
+- [x] Improve input boxes: better typography, padding, and styling (rounded-xl, px-6 py-5, bg-background/50)
+- [x] Reduce grid opacity for more subtle appearance (0.08 → 0.04)
+- [x] Remove background from theme toggle button (bg-transparent hover:bg-transparent)
+- [x] Add rotation animation to theme toggle on hover (hover:rotate-180 duration-500)

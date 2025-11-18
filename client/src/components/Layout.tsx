@@ -103,7 +103,7 @@ export default function Layout({ children, className }: { children: React.ReactN
                     variant="ghost"
                     size="icon"
                     onClick={toggleTheme}
-                    className="rounded-lg"
+                    className="rounded-lg bg-transparent hover:bg-transparent hover:rotate-180 transition-transform duration-500"
                     aria-label="Toggle theme"
                   >
                     {theme === "dark" ? (
