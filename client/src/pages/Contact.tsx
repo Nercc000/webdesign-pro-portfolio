@@ -64,11 +64,11 @@ export default function Contact() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-background/50 pt-32 pb-12">
-        {/* Animated Grid Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+      {/* Hero Section with Extended Grid */}
+      <section className="relative overflow-visible bg-gradient-to-b from-background via-background to-background/50 pt-32 pb-12">
+        {/* Animated Grid Background - Extended and More Visible */}
+        <div className="absolute inset-0 -bottom-[200vh] bg-[linear-gradient(to_right,oklch(0.5_0.02_var(--primary-hue))_2px,transparent_2px),linear-gradient(to_bottom,oklch(0.5_0.02_var(--primary-hue))_2px,transparent_2px)] bg-[size:80px_80px] opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/80" />
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -240,14 +240,14 @@ export default function Contact() {
                   Oder senden Sie mir eine kurze Nachricht
                 </span>
               </div>
-              <form onSubmit={handleSubmit} className="relative rounded-xl border border-primary/20 bg-card/50 backdrop-blur-sm p-8 space-y-8 shadow-lg">
+              <form onSubmit={handleSubmit} className="relative rounded-xl border border-primary/20 bg-card/50 backdrop-blur-sm p-10 space-y-10 shadow-lg">
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
                 
-                <div className="space-y-3 relative">
-                  <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-primary" />
-                    <Label htmlFor="name" className="text-sm font-semibold text-foreground">
+                <div className="space-y-4 relative">
+                  <div className="flex items-center gap-3">
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <Label htmlFor="name" className="text-lg font-semibold text-foreground tracking-tight">
                       Ihr Name
                     </Label>
                   </div>
@@ -256,15 +256,15 @@ export default function Contact() {
                     placeholder="Max Mustermann"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="border-0 border-b-2 border-border bg-transparent px-0 rounded-none focus-visible:border-primary transition-colors"
+                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-primary transition-colors focus-visible:ring-0"
                     required
                   />
                 </div>
 
-                <div className="space-y-3 relative">
-                  <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-primary" />
-                    <Label htmlFor="email" className="text-sm font-semibold text-foreground">
+                <div className="space-y-4 relative">
+                  <div className="flex items-center gap-3">
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <Label htmlFor="email" className="text-lg font-semibold text-foreground tracking-tight">
                       E-Mail Adresse
                     </Label>
                   </div>
@@ -274,15 +274,15 @@ export default function Contact() {
                     placeholder="max@beispiel.de"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="border-0 border-b-2 border-border bg-transparent px-0 rounded-none focus-visible:border-primary transition-colors"
+                    className="border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-primary transition-colors focus-visible:ring-0"
                     required
                   />
                 </div>
 
-                <div className="space-y-3 relative">
-                  <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-primary" />
-                    <Label htmlFor="message" className="text-sm font-semibold text-foreground">
+                <div className="space-y-4 relative">
+                  <div className="flex items-center gap-3">
+                    <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    <Label htmlFor="message" className="text-lg font-semibold text-foreground tracking-tight">
                       Ihre Nachricht
                     </Label>
                   </div>
@@ -291,7 +291,7 @@ export default function Contact() {
                     placeholder="Erzählen Sie uns von Ihrem Projekt..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-[150px] resize-none border-2 border-border bg-transparent rounded-lg focus-visible:border-primary transition-colors"
+                    className="min-h-[180px] resize-none border-0 border-b-2 border-border bg-transparent px-0 py-4 text-lg rounded-none focus-visible:border-primary transition-colors focus-visible:ring-0"
                     required
                   />
                 </div>
@@ -313,8 +313,6 @@ export default function Contact() {
                 </Button>
               </form>
             </motion.div>
-
-
           </div>
         </div>
       </section>
@@ -322,12 +320,13 @@ export default function Contact() {
       {/* Detailed Form Dialog */}
       <Dialog open={showDetailedForm} onOpenChange={setShowDetailedForm}>
         <DialogContent className="max-h-[90vh] max-w-4xl overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl">Detaillierte Projektanfrage</DialogTitle>
-          </DialogHeader>
+          <div>
+            <DialogHeader>
+              <DialogTitle className="text-2xl">Detaillierte Projektanfrage</DialogTitle>
+            </DialogHeader>
 
-          {/* Progress Bar */}
-          <div className="mb-6">
+            {/* Progress Bar */}
+            <div className="mb-6">
             <div className="mb-2 flex justify-between text-sm font-medium">
               <span>Schritt {detailedStep} von 5</span>
               <span>{(detailedStep / 5) * 100}%</span>
@@ -378,8 +377,9 @@ export default function Contact() {
             )}
 
             {detailedStep === 2 && (
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold">Budget</h3>
+              <div>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold">Budget</h3>
                 <p className="text-sm text-muted-foreground">
                   Wählen Sie Ihren ungefähren Budgetrahmen.
                 </p>
@@ -409,10 +409,12 @@ export default function Contact() {
                     </div>
                   ))}
                 </RadioGroup>
+                </div>
               </div>
             )}
 
             {detailedStep === 3 && (
+              <div>
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Zeitrahmen</h3>
                 <p className="text-sm text-muted-foreground">
@@ -443,6 +445,7 @@ export default function Contact() {
                     </div>
                   ))}
                 </RadioGroup>
+                </div>
               </div>
             )}
 
@@ -529,6 +532,7 @@ export default function Contact() {
                 Anfrage absenden
               </Button>
             )}
+          </div>
           </div>
         </DialogContent>
       </Dialog>

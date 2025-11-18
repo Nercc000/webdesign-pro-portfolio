@@ -163,3 +163,11 @@
 - [x] Redesign simple form to be more unique and not a copy - underline inputs, dot indicators, decorative corner accent
 - [x] Improve color scheme - find better, more fitting colors for contact page - using primary color accents, transparent backgrounds
 - [x] Make the design more distinctive and memorable - unique form styling with backdrop blur and shadows
+
+## Contact Page Refinements
+
+- [x] Make grid background more visible (stronger lines, larger cells)
+- [x] Extend grid background further down the page
+- [x] Improve form typography (larger labels, better font sizes)
+- [x] Make input boxes larger and better styled to match overall design
+- [x] Enhance overall typography hierarchy in the form
