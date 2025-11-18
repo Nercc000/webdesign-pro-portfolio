@@ -171,3 +171,9 @@
 - [x] Improve form typography (larger labels, better font sizes)
 - [x] Make input boxes larger and better styled to match overall design
 - [x] Enhance overall typography hierarchy in the form
+
+## Grid Background Visibility Issue
+
+- [x] Make grid pattern actually visible - using 2px thick lines with rgba(0,0,0,0.06)
+- [x] Use simpler CSS approach with higher contrast colors
+- [x] Test with different opacity values to ensure visibility
