@@ -239,3 +239,10 @@
 - [x] Reduce body text sizes slightly (text-lg to text-2xl, was text-3xl)
 - [x] Make particles smaller and more subtle (w-0.5 h-0.5, 30 particles, bg-foreground/20)
 - [x] Fix theme toggle hover to be fully transparent (bg-transparent hover:bg-transparent)
+
+## Fix Invisible Particles
+
+- [x] Debug why particles are not visible - fixed with inline styles and z-index
+- [x] Make particles clearly visible (2px white with glow, opacity 0.4, box-shadow)
+- [ ] Commit and push to main branch
+- [ ] Create backup in new repository

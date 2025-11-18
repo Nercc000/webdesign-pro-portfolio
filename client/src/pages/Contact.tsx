@@ -70,19 +70,24 @@ export default function Contact() {
         <div className="absolute inset-0 -bottom-[150vh] bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:100px_100px]" />
         
         {/* Floating Particles */}
-        <div className="absolute inset-0 -bottom-[150vh] overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 -bottom-[150vh] overflow-hidden pointer-events-none z-[1]">
           {[...Array(30)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-0.5 h-0.5 bg-foreground/20 rounded-full"
+              className="absolute rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
+                width: '2px',
+                height: '2px',
+                backgroundColor: '#ffffff',
+                opacity: 0.4,
+                boxShadow: '0 0 4px rgba(255,255,255,0.5)',
               }}
               animate={{
                 y: [0, -30, 0],
                 x: [0, Math.random() * 20 - 10, 0],
-                opacity: [0.3, 0.8, 0.3],
+                opacity: [0.2, 0.6, 0.2],
               }}
               transition={{
                 duration: 3 + Math.random() * 4,
