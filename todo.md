@@ -223,3 +223,12 @@
 - [x] Reduce grid opacity for more subtle appearance (0.08 → 0.04)
 - [x] Remove background from theme toggle button (bg-transparent hover:bg-transparent)
 - [x] Add rotation animation to theme toggle on hover (hover:rotate-180 duration-500)
+
+## Scale Up for Large Monitors & Particle Animation
+
+- [x] Implement new darker blue color palette (oklch(0.45 0.15 260) - professional deep blue)
+- [x] Increase base font sizes for large monitors (text-8xl to text-[12rem] for hero, text-xl to text-3xl for body)
+- [x] Increase container max-widths for better use of screen space (1400px @ 1024px, 1600px @ 1536px)
+- [x] Make card icons much larger (h-12 w-12, feature icons scale-150)
+- [x] Add floating particle background animation (20 particles with Framer Motion)
+- [x] Fix submit button color with new blue palette (automatically uses new primary color)

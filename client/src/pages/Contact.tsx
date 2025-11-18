@@ -68,6 +68,31 @@ export default function Contact() {
       <section className="relative overflow-visible pt-32 pb-12">
         {/* Animated Grid Background - Larger cells, subtle opacity */}
         <div className="absolute inset-0 -bottom-[150vh] bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:100px_100px]" />
+        
+        {/* Floating Particles */}
+        <div className="absolute inset-0 -bottom-[150vh] overflow-hidden pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-primary/30 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -30, 0],
+                x: [0, Math.random() * 20 - 10, 0],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,12 +110,12 @@ export default function Contact() {
             </div>
 
             {/* Massive Headline */}
-            <h1 className="mb-6 font-serif text-7xl font-bold tracking-tight sm:text-8xl md:text-9xl">
+            <h1 className="mb-8 font-serif text-8xl font-bold tracking-tight sm:text-9xl md:text-[10rem] lg:text-[12rem]">
               KONTAKT
             </h1>
 
             {/* Subheadline with social proof */}
-            <p className="text-lg text-muted-foreground sm:text-xl">
+            <p className="text-xl text-muted-foreground sm:text-2xl md:text-3xl max-w-4xl mx-auto">
               Über 50+ zufriedene Kunden. Antwort innerhalb von 24 Stunden garantiert.
             </p>
           </motion.div>
@@ -135,9 +160,9 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 className="rounded-xl border-2 bg-card/80 backdrop-blur p-8 transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="mb-4 flex justify-center text-foreground">{feature.icon}</div>
-                <h3 className="mb-2 text-center font-bold">{feature.title}</h3>
-                <p className="text-center text-sm text-muted-foreground font-mono">{feature.description}</p>
+                <div className="mb-6 flex justify-center text-foreground scale-150">{feature.icon}</div>
+                <h3 className="mb-3 text-center text-xl font-bold">{feature.title}</h3>
+                <p className="text-center text-base text-muted-foreground font-mono">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -163,17 +188,17 @@ export default function Contact() {
                 onClick={copyEmail}
                 className="group relative w-full rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 text-center transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
               >
-                <div className="mb-4 flex justify-center">
+                <div className="mb-6 flex justify-center">
                   {emailCopied ? (
-                    <Check className="h-8 w-8 text-primary" />
+                    <Check className="h-12 w-12 text-primary" />
                   ) : (
-                    <Mail className="h-8 w-8 text-foreground transition-colors" />
+                    <Mail className="h-12 w-12 text-foreground transition-colors" />
                   )}
                 </div>
-                <span className="block font-mono text-xl font-bold mb-2">
+                <span className="block font-mono text-2xl font-bold mb-3">
                   kontakt@webdesignpro.de
                 </span>
-                <div className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
+                <div className="text-sm font-medium uppercase tracking-widest text-muted-foreground">
                   {emailCopied ? "Kopiert!" : "Klicken zum Kopieren"}
                 </div>
               </button>
@@ -195,11 +220,11 @@ export default function Contact() {
                   href="#calendly"
                   className="group rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
                 >
-                  <div className="mb-4 flex justify-center text-foreground">
-                    <Calendar className="h-8 w-8" />
+                  <div className="mb-6 flex justify-center text-foreground">
+                    <Calendar className="h-12 w-12" />
                   </div>
-                  <h3 className="mb-2 text-center font-bold">Calendly</h3>
-                  <p className="text-center text-sm font-mono text-muted-foreground">30 Min. buchen</p>
+                  <h3 className="mb-3 text-center text-xl font-bold">Calendly</h3>
+                  <p className="text-center text-base font-mono text-muted-foreground">30 Min. buchen</p>
                 </a>
                 <a
                   href="https://wa.me/49123456789"
@@ -207,21 +232,21 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="group rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
                 >
-                  <div className="mb-4 flex justify-center text-foreground">
-                    <MessageCircle className="h-8 w-8" />
+                  <div className="mb-6 flex justify-center text-foreground">
+                    <MessageCircle className="h-12 w-12" />
                   </div>
-                  <h3 className="mb-2 text-center font-bold">WhatsApp</h3>
-                  <p className="text-center text-sm font-mono text-muted-foreground">Direkte Nachricht</p>
+                  <h3 className="mb-3 text-center text-xl font-bold">WhatsApp</h3>
+                  <p className="text-center text-base font-mono text-muted-foreground">Direkte Nachricht</p>
                 </a>
                 <button
                   onClick={() => setShowDetailedForm(true)}
                   className="group rounded-xl border-2 border-border bg-card/80 backdrop-blur p-8 text-center transition-all hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1"
                 >
-                  <div className="mb-4 flex justify-center text-foreground">
-                    <Send className="h-8 w-8" />
+                  <div className="mb-6 flex justify-center text-foreground">
+                    <Send className="h-12 w-12" />
                   </div>
-                  <h3 className="mb-2 font-bold">Detaillierte Anfrage</h3>
-                  <p className="text-sm font-mono text-muted-foreground">5-Schritte Formular</p>
+                  <h3 className="mb-3 text-xl font-bold">Detaillierte Anfrage</h3>
+                  <p className="text-base font-mono text-muted-foreground">5-Schritte Formular</p>
                 </button>
               </div>
             </motion.div>

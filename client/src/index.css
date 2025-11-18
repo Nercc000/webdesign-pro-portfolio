@@ -198,16 +198,16 @@ html {
 
 /* Dark Mode - Pure Black with Vibrant Blue Accents */
 .dark {
-  /* Primary - Vibrant Blue (#3b82f6) for CTAs and important elements */
-  --primary: oklch(0.62 0.20 260);
+  /* Primary - Professional Deep Blue (#1e40af) for CTAs and important elements */
+  --primary: oklch(0.45 0.15 260);
   --primary-foreground: oklch(1 0 0); /* Pure white */
 
   /* Secondary - Medium Gray for subtle elements */
   --secondary: oklch(0.35 0.01 250);
   --secondary-foreground: oklch(1 0 0);
 
-  /* Accent - Lighter Blue for hover states */
-  --accent: oklch(0.68 0.18 272);
+  /* Accent - Medium Blue for hover states */
+  --accent: oklch(0.55 0.17 265);
   --accent-foreground: oklch(1 0 0);
 
   /* Background & Surface - Pure Black (#000000) */
@@ -396,7 +396,13 @@ html {
     .container {
       padding-left: 2rem; /* 32px - desktop padding */
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1400px; /* Larger content width for big monitors */
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1600px; /* Even larger for 2K+ monitors */
     }
   }
 }
