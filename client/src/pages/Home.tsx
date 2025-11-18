@@ -153,7 +153,7 @@ const ProjectCard = ({ title, description, image, technologies, results, categor
 
         {/* Results */}
         <div className="flex items-center gap-2 text-sm">
-          <CheckCircle2 className="h-4 w-4 text-primary" />
+          <CheckCircle2 className="h-4 w-4 text-foreground" />
           <span className="font-semibold text-primary">{results}</span>
         </div>
       </div>
@@ -397,7 +397,7 @@ export default function Home() {
               variants={fadeInUp}
             >
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
-                <Target className="h-4 w-4 text-primary" />
+                <Target className="h-4 w-4 text-foreground" />
                 <span className="text-sm font-medium text-primary">Portfolio</span>
               </div>
               <h2 className="mb-6 text-3xl font-bold leading-[1.3] md:text-4xl lg:text-5xl">
@@ -537,7 +537,7 @@ export default function Home() {
               className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2"
               variants={scaleIn}
             >
-              <Sparkles className="h-4 w-4 text-primary" />
+              <Sparkles className="h-4 w-4 text-foreground" />
               <span className="text-sm font-medium text-primary">Leistungen</span>
             </motion.div>
             <h2 className="mb-6 text-3xl font-bold leading-[1.3] md:text-4xl lg:text-5xl">
@@ -566,7 +566,7 @@ export default function Home() {
               <div className="md:col-span-3">
                 <div className="flex items-center gap-6">
                   <span className="text-8xl font-black text-primary/20 transition-all duration-500 group-hover:text-primary/50 group-hover:scale-110">01</span>
-                  <Code className="h-12 w-12 text-primary transition-transform group-hover:scale-110" />
+                  <Code className="h-12 w-12 text-foreground transition-transform group-hover:scale-110" />
                 </div>
               </div>
               <div className="md:col-span-9 relative">
@@ -600,7 +600,7 @@ export default function Home() {
               </div>
               <div className="md:col-span-3 md:order-2">
                 <div className="flex items-center gap-6 md:justify-end">
-                  <Smartphone className="h-12 w-12 text-primary transition-transform group-hover:scale-110" />
+                  <Smartphone className="h-12 w-12 text-foreground transition-transform group-hover:scale-110" />
                   <span className="text-8xl font-black text-primary/20 transition-all duration-500 group-hover:text-primary/50 group-hover:scale-110">02</span>
                 </div>
               </div>
@@ -618,7 +618,7 @@ export default function Home() {
               <div className="md:col-span-3">
                 <div className="flex items-center gap-6">
                   <span className="text-8xl font-black text-primary/20 transition-all duration-500 group-hover:text-primary/50 group-hover:scale-110">03</span>
-                  <Search className="h-12 w-12 text-primary transition-transform group-hover:scale-110" />
+                  <Search className="h-12 w-12 text-foreground transition-transform group-hover:scale-110" />
                 </div>
               </div>
               <div className="md:col-span-9 relative">
@@ -652,7 +652,7 @@ export default function Home() {
               </div>
               <div className="md:col-span-3 md:order-2">
                 <div className="flex items-center gap-6 md:justify-end">
-                  <Headphones className="h-12 w-12 text-primary transition-transform group-hover:scale-110" />
+                  <Headphones className="h-12 w-12 text-foreground transition-transform group-hover:scale-110" />
                   <span className="text-8xl font-black text-primary/20 transition-all duration-500 group-hover:text-primary/50 group-hover:scale-110">04</span>
                 </div>
               </div>
@@ -762,7 +762,7 @@ export default function Home() {
           {/* Header */}
           <div className="mb-16 text-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
-              <Sparkles className="h-4 w-4 text-primary" />
+              <Sparkles className="h-4 w-4 text-foreground" />
               <span className="text-sm font-medium text-primary">Kundenstimmen</span>
             </div>
             <h2 className="mb-6 text-3xl font-bold leading-[1.3] md:text-4xl lg:text-5xl">
@@ -974,7 +974,7 @@ export default function Home() {
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
                       >
-                        <CheckCircle2 className="h-5 w-5 text-primary" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground" />
                       </motion.div>
                       <span>Antwort in 24h</span>
                     </motion.div>
@@ -989,7 +989,7 @@ export default function Home() {
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 0.5 }}
                       >
-                        <CheckCircle2 className="h-5 w-5 text-primary" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground" />
                       </motion.div>
                       <span>Unverbindlich & kostenlos</span>
                     </motion.div>
@@ -1004,7 +1004,7 @@ export default function Home() {
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, delay: 1 }}
                       >
-                        <CheckCircle2 className="h-5 w-5 text-primary" />
+                        <CheckCircle2 className="h-5 w-5 text-foreground" />
                       </motion.div>
                       <span>Individuelle Beratung</span>
                     </motion.div>

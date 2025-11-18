@@ -187,3 +187,22 @@
 
 - [x] Make grid darker for better visibility - adjusted to optimal opacity
 - [x] Fix gap/discontinuity in grid pattern between sections - removed gradient overlay
+
+## Dark Mode Redesign
+
+- [x] Update color palette in index.css to dark mode (pure black background, white text)
+- [x] Set blue brand color for primary accents and CTAs (oklch(0.62 0.20 260))
+- [x] Update Contact page with new dark mode styling (white grid lines)
+- [x] Update Home page with new dark mode styling - icons use text-foreground
+- [x] Update Services page with new dark mode styling - icons use text-foreground
+- [x] Update Portfolio page with new dark mode styling - icons use text-foreground
+- [x] Update About page with new dark mode styling - icons use text-foreground
+- [x] Ensure icons and important text are white (foreground: oklch(1 0 0))
+- [x] Ensure CTAs use blue brand color
+
+## Icon Color Fix
+
+- [x] Change all icons to use foreground color (black in light mode, white in dark mode)
+- [x] Keep blue brand color only for CTAs, buttons, and important links
+- [x] Review Contact page icons and update colors - changed feature cards and other ways icons to text-foreground
+- [x] Review all other pages and update icon colors - updated Home, Services, Portfolio, About pages

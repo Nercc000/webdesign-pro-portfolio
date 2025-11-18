@@ -387,7 +387,7 @@ export default function Portfolio() {
               variants={staggerContainer}
             >
               <motion.div variants={scaleIn} className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2">
-                <Sparkles className="h-4 w-4 text-primary" />
+                <Sparkles className="h-4 w-4 text-foreground" />
                 <span className="text-sm font-medium text-primary">Portfolio</span>
               </motion.div>
 
@@ -466,7 +466,7 @@ export default function Portfolio() {
                     className="text-center"
                   >
                     <Card className="border-primary/10 bg-card/50 p-8 backdrop-blur transition-all hover:border-primary/30 hover:shadow-lg">
-                      <Icon className="mx-auto mb-4 h-8 w-8 text-primary" />
+                      <Icon className="mx-auto mb-4 h-8 w-8 text-foreground" />
                       <div className="mb-2 text-4xl font-black text-primary">{stat.value}</div>
                       <div className="text-sm text-muted-foreground">{stat.label}</div>
                     </Card>

@@ -94,7 +94,7 @@ export default function About() {
                 >
                   <div className="mb-4 flex justify-center">
                     <div className="rounded-xl bg-primary/10 p-4 transition-all group-hover:bg-primary/20">
-                      <stat.icon className="h-8 w-8 text-primary" />
+                      <stat.icon className="h-8 w-8 text-foreground" />
                     </div>
                   </div>
                   <div className="mb-2 text-5xl font-black text-primary">{stat.value}</div>
@@ -158,7 +158,7 @@ export default function About() {
                 >
                   <CardContent className="p-8">
                     <div className="mb-6 inline-flex rounded-2xl bg-primary/10 p-5 transition-all group-hover:scale-110 group-hover:bg-primary/20">
-                      <value.icon className="h-10 w-10 text-primary" />
+                      <value.icon className="h-10 w-10 text-foreground" />
                     </div>
                     <h3 className="mb-4 text-2xl font-bold">{value.title}</h3>
                     <p className="leading-relaxed text-muted-foreground">{value.description}</p>
@@ -226,7 +226,7 @@ export default function About() {
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className="mb-3 flex justify-center">
-                    <Sparkles className="h-6 w-6 text-primary" />
+                    <Sparkles className="h-6 w-6 text-foreground" />
                   </div>
                   <span className="text-lg font-bold">{industry}</span>
                 </div>
@@ -242,7 +242,7 @@ export default function About() {
         <div className="container relative z-10">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-8 inline-flex rounded-full bg-primary/10 p-8">
-              <CheckCircle2 className="h-16 w-16 text-primary" />
+              <CheckCircle2 className="h-16 w-16 text-foreground" />
             </div>
             <h2 className="mb-6 text-4xl font-black md:text-5xl lg:text-6xl">
               Meine Garantie an Sie
@@ -255,22 +255,22 @@ export default function About() {
 
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="rounded-xl border-2 border-primary/20 bg-card/50 p-6 text-left backdrop-blur">
-                <CheckCircle2 className="mb-3 h-8 w-8 text-primary" />
+                <CheckCircle2 className="mb-3 h-8 w-8 text-foreground" />
                 <div className="mb-2 text-xl font-bold">Keine Vorkasse</div>
                 <div className="text-muted-foreground">Sie zahlen erst bei Zufriedenheit</div>
               </div>
               <div className="rounded-xl border-2 border-primary/20 bg-card/50 p-6 text-left backdrop-blur">
-                <CheckCircle2 className="mb-3 h-8 w-8 text-primary" />
+                <CheckCircle2 className="mb-3 h-8 w-8 text-foreground" />
                 <div className="mb-2 text-xl font-bold">Transparente Preise</div>
                 <div className="text-muted-foreground">Keine versteckten Kosten</div>
               </div>
               <div className="rounded-xl border-2 border-primary/20 bg-card/50 p-6 text-left backdrop-blur">
-                <CheckCircle2 className="mb-3 h-8 w-8 text-primary" />
+                <CheckCircle2 className="mb-3 h-8 w-8 text-foreground" />
                 <div className="mb-2 text-xl font-bold">Schnelle Umsetzung</div>
                 <div className="text-muted-foreground">Fertig in 2-4 Wochen</div>
               </div>
               <div className="rounded-xl border-2 border-primary/20 bg-card/50 p-6 text-left backdrop-blur">
-                <CheckCircle2 className="mb-3 h-8 w-8 text-primary" />
+                <CheckCircle2 className="mb-3 h-8 w-8 text-foreground" />
                 <div className="mb-2 text-xl font-bold">Persönlicher Support</div>
                 <div className="text-muted-foreground">Auch nach dem Launch</div>
               </div>

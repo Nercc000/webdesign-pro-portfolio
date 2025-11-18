@@ -153,7 +153,7 @@ export default function Services() {
                     {/* Icon Overlay */}
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                       <div className="rounded-2xl border-2 border-primary/20 bg-primary/10 p-8 backdrop-blur transition-all hover:scale-110 hover:border-primary hover:shadow-2xl hover:shadow-primary/20">
-                        <service.icon className="h-16 w-16 text-primary" />
+                        <service.icon className="h-16 w-16 text-foreground" />
                       </div>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ export default function Services() {
                   <ul className="space-y-4">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-primary" />
+                        <CheckCircle2 className="mt-1 h-6 w-6 flex-shrink-0 text-foreground" />
                         <span className="text-lg text-muted-foreground">{feature}</span>
                       </li>
                     ))}
@@ -292,15 +292,15 @@ export default function Services() {
             {/* Trust Indicators */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-base text-muted-foreground">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>Keine Vorkasse</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>Geld-zurück-Garantie</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
+                <CheckCircle2 className="h-5 w-5 text-foreground" />
                 <span>Fertig in 2-4 Wochen</span>
               </div>
             </div>

@@ -67,7 +67,7 @@ export default function Contact() {
       {/* Hero Section with Extended Grid */}
       <section className="relative overflow-visible pt-32 pb-12">
         {/* Animated Grid Background - Larger cells, subtle opacity */}
-        <div className="absolute inset-0 -bottom-[150vh] bg-[linear-gradient(to_right,#80808015_1px,transparent_1px),linear-gradient(to_bottom,#80808015_1px,transparent_1px)] bg-[size:100px_100px]" />
+        <div className="absolute inset-0 -bottom-[150vh] bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:100px_100px]" />
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -135,7 +135,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 className="rounded-lg border bg-card p-6 transition-colors hover:border-primary/50"
               >
-                <div className="mb-3 text-primary">{feature.icon}</div>
+                <div className="mb-3 text-foreground">{feature.icon}</div>
                 <h3 className="mb-1 font-semibold">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground font-mono">{feature.description}</p>
               </motion.div>
@@ -171,7 +171,7 @@ export default function Contact() {
                     {emailCopied ? (
                       <Check className="h-5 w-5 text-primary" />
                     ) : (
-                      <Copy className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary" />
+                      <Copy className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-foreground" />
                     )}
                   </div>
                 </div>
@@ -197,7 +197,7 @@ export default function Contact() {
                   href="#calendly"
                   className="group rounded-lg border-2 border-primary/20 bg-card p-6 transition-all hover:border-primary/50 hover:bg-card/80"
                 >
-                  <div className="mb-3 text-primary">
+                  <div className="mb-3 text-foreground">
                     <Calendar className="h-6 w-6" />
                   </div>
                   <h3 className="mb-1 font-semibold">Calendly</h3>
@@ -209,7 +209,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="group rounded-lg border-2 border-primary/20 bg-card p-6 transition-all hover:border-primary/50 hover:bg-card/80"
                 >
-                  <div className="mb-3 text-primary">
+                  <div className="mb-3 text-foreground">
                     <MessageCircle className="h-6 w-6" />
                   </div>
                   <h3 className="mb-1 font-semibold">WhatsApp</h3>
@@ -219,7 +219,7 @@ export default function Contact() {
                   onClick={() => setShowDetailedForm(true)}
                   className="group rounded-lg border-2 border-primary/20 bg-card p-6 text-left transition-all hover:border-primary/50 hover:bg-card/80"
                 >
-                  <div className="mb-3 text-primary">
+                  <div className="mb-3 text-foreground">
                     <Send className="h-6 w-6" />
                   </div>
                   <h3 className="mb-1 font-semibold">Detaillierte Anfrage</h3>
