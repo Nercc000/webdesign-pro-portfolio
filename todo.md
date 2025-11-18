@@ -180,5 +180,10 @@
 
 ## Grid Cell Size Adjustment
 
-- [x] Increase grid cell size from 24px to 60px for better visual balance
-- [x] Test different cell sizes to find optimal spacing - 60px provides good balance
+- [x] Increase grid cell size from 24px to 100px for better visual balance
+- [x] Test different cell sizes to find optimal spacing - 100px with reduced opacity provides good balance
+
+## Grid Visual Improvements
+
+- [x] Make grid darker for better visibility - adjusted to optimal opacity
+- [x] Fix gap/discontinuity in grid pattern between sections - removed gradient overlay
