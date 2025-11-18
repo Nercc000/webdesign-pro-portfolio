@@ -177,3 +177,8 @@
 - [x] Make grid pattern actually visible - using 2px thick lines with rgba(0,0,0,0.06)
 - [x] Use simpler CSS approach with higher contrast colors
 - [x] Test with different opacity values to ensure visibility
+
+## Grid Cell Size Adjustment
+
+- [x] Increase grid cell size from 24px to 60px for better visual balance
+- [x] Test different cell sizes to find optimal spacing - 60px provides good balance

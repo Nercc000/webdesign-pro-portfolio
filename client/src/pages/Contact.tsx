@@ -66,17 +66,9 @@ export default function Contact() {
     <Layout>
       {/* Hero Section with Extended Grid */}
       <section className="relative overflow-visible pt-32 pb-12">
-        {/* Visible Grid Background - Strong and Clear */}
-        <div 
-          className="absolute inset-0 -bottom-[150vh] z-0" 
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(0, 0, 0, 0.06) 2px, transparent 2px),
-              linear-gradient(to bottom, rgba(0, 0, 0, 0.06) 2px, transparent 2px)
-            `,
-            backgroundSize: '80px 80px'
-          }}
-        />
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 -bottom-[150vh] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
